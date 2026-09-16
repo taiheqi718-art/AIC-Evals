@@ -32,6 +32,8 @@ The desktop or CLI public-export workflow is expected to produce, at minimum:
 - task base commit and verifier/container identity where available;
 - the frozen candidate patch and its SHA-256 digest;
 - aggregate verifier output that is safe to redistribute;
+- operator-reported model/API cost and event-derived wall-clock timing, with their scopes stated;
+- aggregate acceptance-probe outcome counts when probe retries materially affect timing;
 - a public-safe run record and file manifest;
 - an attempt-series ledger, including unsuccessful attempts and excluded infrastructure failures;
 - a short README stating human involvement and known limitations.

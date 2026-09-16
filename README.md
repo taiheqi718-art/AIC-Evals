@@ -6,9 +6,9 @@ This repository publishes inspectable evidence from selected AIC evaluation runs
 
 ## Published results
 
-| Benchmark | Task | Model | Attempt | F2P | P2P | Reward |
-|---|---|---|---:|---:|---:|---:|
-| DeepSWE v1.1 | [`updo-policy-alerting`](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/) | Qwen3.8-Flash | 1 (post-fix) | **17/17** | **123/123** | **1.0** |
+| Benchmark | Task | Model | Attempt | F2P | P2P | Reward | Model cost | AIC time |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| DeepSWE v1.1 | [`updo-policy-alerting`](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/) | Qwen3.8-Flash | 1 (post-fix) | **17/17** | **123/123** | **1.0** | **$0.31** | **56m 55s** |
 
 ![Verified scorecard](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/scorecard.png)
 
@@ -41,6 +41,8 @@ Two verifier-selected event-ordering details are more specific than the public p
 - the upstream license applicable to the patched project.
 
 Raw test reports, test names, held-out test source, private rubrics, model transcripts, internal AIC role artifacts, and machine-local configuration are intentionally excluded.
+
+Cost and timing are reported with an explicit scope. Model cost is operator-reported model/API spend, not total infrastructure cost. AIC time runs from prompt acceptance to the `delivered` terminal state; end-to-end time additionally includes the post-delivery canonical verifier. No hypothetical retry-adjusted duration is reported.
 
 ## Community submissions
 

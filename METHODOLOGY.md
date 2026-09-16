@@ -47,6 +47,18 @@ The following are excluded by default:
 
 The public patch can be inspected and applied to the pinned upstream base. Reproducing the official score additionally requires authorized access to the corresponding benchmark verifier materials. Reproducing the complete generation process would require the proprietary AIC runtime and is outside this repository's scope.
 
+## Cost and timing
+
+Published model cost is operator-reported model/API spend for the run. It excludes local compute, container execution, storage, and operator time unless a run explicitly states otherwise.
+
+Timing uses immutable runtime events:
+
+- **AIC wall-clock** begins when the task prompt is accepted and ends when AIC reaches `delivered`.
+- **End-to-end wall-clock** begins at the same point and ends when the post-delivery canonical verifier finishes.
+- Phase durations, when published, use the corresponding phase-transition events.
+
+Probe retries and corrective model turns remain included. A run may disclose aggregate probe outcomes to explain latency, but a non-passing model-authored probe is not automatically a candidate defect: it may instead be a probe construction error or an assertion superseded by corrected evidence. Because valid acceptance work and corrective turns are interleaved, this repository does not publish a speculative retry-adjusted duration.
+
 ## External comparison data
 
 Task-comparison pages are derived from public benchmark-owner datasets, not from AIC logs. Each comparison records the source URLs, retrieval timestamp, and SHA-256 hashes of the source snapshots used for aggregation.

