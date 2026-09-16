@@ -2,7 +2,7 @@
 
 ## Description
 
-> Verified benchmark artifacts, model patches, and integrity receipts for AIC, a closed-source host-enforced AI software engineering runtime.
+> Public evidence for AIC coding-agent evaluations: frozen patches, canonical verifier scores, integrity hashes, cost, timing, and task context.
 
 ## Topics
 
@@ -11,8 +11,15 @@
 - `software-engineering`
 - `benchmark`
 - `evaluation`
+- `llm-evaluation`
 - `deepswe`
+- `deep-swe`
+- `qwen`
 - `reproducibility`
+
+## Social preview
+
+Upload [`assets/social-preview.png`](assets/social-preview.png) in the repository's Social Preview settings. It is rendered at 1280×640 and includes the verified result, same-task context, and the cross-harness limitation.
 
 ## Visibility
 

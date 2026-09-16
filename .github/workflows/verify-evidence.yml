@@ -1,0 +1,39 @@
+name: Verify published evidence
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Validate JSON documents
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $files = Get-ChildItem -Recurse -File -Filter '*.json' | Sort-Object FullName
+          foreach ($file in $files) {
+            Get-Content -Raw -LiteralPath $file.FullName | ConvertFrom-Json -Depth 100 | Out-Null
+            Write-Output "Valid JSON: $($file.FullName)"
+          }
+
+      - name: Verify evidence manifests
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $scripts = Get-ChildItem './runs' -Recurse -File -Filter 'verify.ps1' | Sort-Object FullName
+          if ($scripts.Count -eq 0) {
+            throw 'No evidence verification scripts were found.'
+          }
+          foreach ($script in $scripts) {
+            & $script.FullName
+          }

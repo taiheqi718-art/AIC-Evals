@@ -1,8 +1,20 @@
 # AIC Evals
 
+[![Verify published evidence](https://github.com/taiheqi718-art/AIC-Evals/actions/workflows/verify-evidence.yml/badge.svg)](https://github.com/taiheqi718-art/AIC-Evals/actions/workflows/verify-evidence.yml)
+
 Verified benchmark artifacts, model patches, and integrity receipts for AIC, a closed-source, host-enforced AI software engineering runtime.
 
 This repository publishes inspectable evidence from selected AIC evaluation runs. It does **not** contain the AIC product, source code, internal system prompts, private role artifacts, held-out tests, or credentials.
+
+## Headline evidence
+
+**Qwen3.8-Flash + AIC passed all 17/17 canonical checks on the DeepSWE v1.1 `updo-policy-alerting` task for an operator-reported model/API cost of $0.31.**
+
+![Qwen3.8-Flash and AIC verified result with same-task model context](assets/social-preview.png)
+
+The comparison above establishes task-difficulty context. AIC and the official model rows used different harnesses, operator protocols, and sampling designs, so it is not a controlled leaderboard.
+
+[Open the evidence bundle](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/) · [Inspect the frozen patch](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/model.patch) · [Review official-result context](comparisons/deepswe-v1.1/updo-policy-alerting/) · [Read rubric notes](comparisons/deepswe-v1.1/updo-policy-alerting/RUBRIC-NOTES.md) · [Read the FAQ](FAQ.md)
 
 ## Published results
 
@@ -46,6 +58,18 @@ Raw test reports, test names, held-out test source, private rubrics, model trans
 
 Cost and timing are reported with an explicit scope. Model cost is operator-reported model/API spend, not total infrastructure cost. Observed AIC time runs from prompt acceptance to the `delivered` terminal state; end-to-end time additionally includes the post-delivery canonical verifier. Effective time excludes known non-passing probe and correction overhead, but is shown only as a strict upper bound because an exact counterfactual duration is not recoverable.
 
+## Evidence chain
+
+| Layer | Public artifact | What it establishes |
+|---|---|---|
+| Task | [`task.md`](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/task.md) | Exact public instruction supplied to AIC |
+| Candidate | [`model.patch`](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/model.patch) | Frozen delivered implementation |
+| Result | [`reward.json`](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/reward.json) | Aggregate canonical verifier outcome |
+| Provenance | [`evidence.json`](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/evidence.json) | Candidate, verifier, cost, timing, and retained-evidence identities |
+| Integrity | [`manifest.json`](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/manifest.json) | SHA-256 inventory of every published run file |
+| Context | [`official-results.json`](comparisons/deepswe-v1.1/updo-policy-alerting/official-results.json) | Machine-readable same-task derivation and official source hashes |
+| Interpretation | [`RUBRIC-NOTES.md`](comparisons/deepswe-v1.1/updo-policy-alerting/RUBRIC-NOTES.md) | Two verifier-selected behaviors more specific than the public prose |
+
 ## Community submissions
 
 When the public AIC desktop and CLI clients are released, developers will be encouraged to evaluate models and tasks and submit public-safe evidence bundles through pull requests.
@@ -60,7 +84,9 @@ A published run shows that the frozen patch identified by its SHA-256 digest pro
 
 Attempt numbering is scoped to a materially stable AIC baseline. The first published result is post-fix attempt 1; earlier internal development and recovery rounds used materially different harness revisions and are not counted in this series. This repository does not yet represent a complete attempt ledger or a full-benchmark score. These results are independent publications and are not official leaderboard submissions.
 
-See [METHODOLOGY.md](METHODOLOGY.md) for the evidence protocol and [DISCLAIMER.md](DISCLAIMER.md) for scope and interpretation limits.
+See [METHODOLOGY.md](METHODOLOGY.md) for the evidence protocol, [FAQ.md](FAQ.md) for common interpretation questions, and [DISCLAIMER.md](DISCLAIMER.md) for scope and limits.
+
+For citation metadata, see [`CITATION.cff`](CITATION.cff). Cite the repository together with the immutable run directory used by your analysis.
 
 ## Repository layout
 
@@ -84,6 +110,10 @@ comparisons/
       README.md
       official-results.json
       RUBRIC-NOTES.md
+assets/
+  social-preview.png
+  social-preview.html
+  render-social-preview.ps1
 submissions/
   <benchmark>/
     <task>/

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this evidence repository, cite the repository and the specific immutable run directory."
+title: "AIC Evals"
+type: dataset
+authors:
+  - family-names: "taiheqi718-art"
+repository-code: "https://github.com/taiheqi718-art/AIC-Evals"
+url: "https://github.com/taiheqi718-art/AIC-Evals"
+license: MIT
+abstract: >-
+  Public evidence bundles for selected AIC coding-agent evaluations, including
+  frozen candidate patches, canonical verifier outcomes, provenance metadata,
+  integrity hashes, cost, timing, task context, and interpretation limits.
+keywords:
+  - AI coding agents
+  - software engineering evaluation
+  - benchmark evidence
+  - DeepSWE
+  - reproducibility
