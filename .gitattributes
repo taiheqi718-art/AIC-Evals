@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.png binary
+*.patch binary
+*.ps1 text eol=lf
+runs/**/patch.meta.json binary
+runs/**/reward.json binary
+runs/**/UPSTREAM-LICENSE.txt binary

