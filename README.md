@@ -6,9 +6,11 @@ This repository publishes inspectable evidence from selected AIC evaluation runs
 
 ## Published results
 
-| Benchmark | Task | Model | Attempt | F2P | P2P | Reward | Model cost | AIC time |
-|---|---|---|---:|---:|---:|---:|---:|---:|
-| DeepSWE v1.1 | [`updo-policy-alerting`](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/) | Qwen3.8-Flash | 1 (post-fix) | **17/17** | **123/123** | **1.0** | **$0.31** | **56m 55s** |
+| Benchmark | Task | Model | Attempt | F2P | P2P | Reward | Model cost | Observed time | Effective time |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|
+| DeepSWE v1.1 | [`updo-policy-alerting`](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/) | Qwen3.8-Flash | 1 (post-fix) | **17/17** | **123/123** | **1.0** | **$0.31** | **56m 55s** | **< 56m 55s** |
+
+> **Timing note:** The observed AIC time includes six non-passing acceptance-probe executions—three `probe_error` and three `behavior_failed` outcomes—and the associated corrective turns. These included probe-construction errors and assertions superseded by corrected evidence, not canonical-verifier failures. The exact retry-adjusted duration cannot be isolated reliably, so effective time is reported only as a conservative upper bound: **< 56m 55s**.
 
 ![Verified scorecard](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/scorecard.png)
 
@@ -42,7 +44,7 @@ Two verifier-selected event-ordering details are more specific than the public p
 
 Raw test reports, test names, held-out test source, private rubrics, model transcripts, internal AIC role artifacts, and machine-local configuration are intentionally excluded.
 
-Cost and timing are reported with an explicit scope. Model cost is operator-reported model/API spend, not total infrastructure cost. AIC time runs from prompt acceptance to the `delivered` terminal state; end-to-end time additionally includes the post-delivery canonical verifier. No hypothetical retry-adjusted duration is reported.
+Cost and timing are reported with an explicit scope. Model cost is operator-reported model/API spend, not total infrastructure cost. Observed AIC time runs from prompt acceptance to the `delivered` terminal state; end-to-end time additionally includes the post-delivery canonical verifier. Effective time excludes known non-passing probe and correction overhead, but is shown only as a strict upper bound because an exact counterfactual duration is not recoverable.
 
 ## Community submissions
 

