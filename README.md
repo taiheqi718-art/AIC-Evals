@@ -42,7 +42,9 @@ The official DeepSWE v1.1 data includes repeated `mini-swe-agent` trials for thi
 | GPT-6 Astra | Official `mini-swe-agent` | **14/20** |
 | GPT-5.6 Sol | Official `mini-swe-agent` | **12/20** |
 | Claude Opus 5 | Official `mini-swe-agent` | **8/20** |
+| DeepSeek V4 Pro | Official `mini-swe-agent` | **3/4** at Max, the only published effort |
 | Gemini 3.8 Flash | Official `mini-swe-agent` | **0/8** across two published effort levels |
+| DeepSeek V4 Flash | Official `mini-swe-agent` | **0/4** at Max, the only published effort |
 | Claude Fable 5 | Official `mini-swe-agent` | **0/20** |
 | Claude Opus 4.8 | Official `mini-swe-agent` | **0/19** scored; 1 provider error excluded |
 | Claude Sonnet 5 | Official `mini-swe-agent` | **0/20** |

