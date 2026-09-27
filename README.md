@@ -10,6 +10,8 @@ This repository publishes inspectable evidence from selected AIC evaluation runs
 
 **Qwen3.8-Flash + AIC passed all 17/17 canonical checks on the DeepSWE v1.1 `updo-policy-alerting` task for an operator-reported model/API cost of $0.31.**
 
+**DeepSeek V4 Flash + AIC also passed all 17/17 canonical checks on the same task, unattended, in 49m 05s.** [Open that evidence bundle](runs/deepswe-v1.1/updo-policy-alerting/deepseek-v4-flash/attempt-01/).
+
 ![Qwen3.8-Flash and AIC verified result with same-task model context](assets/social-preview.png)
 
 The comparison above establishes task-difficulty context. AIC and the official model rows used different harnesses, operator protocols, and sampling designs, so it is not a controlled leaderboard.
@@ -21,6 +23,9 @@ The comparison above establishes task-difficulty context. AIC and the official m
 | Benchmark | Task | Model | Attempt | F2P | P2P | Reward | Model cost | Observed time | Effective time |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|
 | DeepSWE v1.1 | [`updo-policy-alerting`](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/) | Qwen3.8-Flash | 1 (post-fix) | **17/17** | **123/123** | **1.0** | **$0.31** | **56m 55s** | **< 56m 55s** |
+| DeepSWE v1.1 | [`updo-policy-alerting`](runs/deepswe-v1.1/updo-policy-alerting/deepseek-v4-flash/attempt-01/) | DeepSeek V4 Flash (reasoning: high) | 1 (A baseline) | **17/17** | **123/123** | **1.0** | not reported¹ | **49m 05s** | — |
+
+¹ The DeepSeek V4 Flash run used a non-commercial quota on a third-party OpenAI-compatible endpoint, so no dollar cost is reported; its token usage is in the [evidence bundle](runs/deepswe-v1.1/updo-policy-alerting/deepseek-v4-flash/attempt-01/). The two rows used different AIC revisions and are separate attempt series.
 
 > **Timing note:** The observed AIC time includes six non-passing acceptance-probe executions—three `probe_error` and three `behavior_failed` outcomes—and the associated corrective turns. These included probe-construction errors and assertions superseded by corrected evidence, not canonical-verifier failures. The exact retry-adjusted duration cannot be isolated reliably, so effective time is reported only as a conservative upper bound: **< 56m 55s**.
 
@@ -33,6 +38,7 @@ The official DeepSWE v1.1 data includes repeated `mini-swe-agent` trials for thi
 | Model / system | Harness | Same-task scored passes |
 |---|---|---:|
 | **Qwen3.8-Flash + AIC** | AIC | **1/1** post-fix attempt |
+| **DeepSeek V4 Flash + AIC** | AIC | **1/1** attempt (A baseline) |
 | GPT-6 Astra | Official `mini-swe-agent` | **14/20** |
 | GPT-5.6 Sol | Official `mini-swe-agent` | **12/20** |
 | Claude Opus 5 | Official `mini-swe-agent` | **8/20** |

