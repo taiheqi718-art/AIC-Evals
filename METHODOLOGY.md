@@ -59,9 +59,9 @@ Timing uses immutable runtime events:
 
 Probe retries and corrective model turns remain included in observed wall-clock time. A run may disclose aggregate probe outcomes to explain latency, but a non-passing model-authored probe is not automatically a candidate defect: it may instead be a probe construction error or an assertion superseded by corrected evidence. When at least one such retry added positive overhead, the run may report effective time as strictly less than observed time. Because valid acceptance work and corrective turns are interleaved, this is an upper bound only—not a speculative point estimate.
 
-## External comparison data
+## Comparison data
 
-Task-comparison pages are derived from public benchmark-owner datasets, not from AIC logs. Each comparison records the source URLs, retrieval timestamp, and SHA-256 hashes of the source snapshots used for aggregation.
+Comparisons with official benchmark results are derived from public benchmark-owner datasets, not from AIC logs. Each such comparison records the source URLs, retrieval timestamp, and SHA-256 hashes of the source snapshots used for aggregation. A separate local same-model Harness comparison uses an operator-retained plain DSH run, not benchmark-owner trial data; it identifies retained aggregate results and candidate by hash and labels the limits of this evidence.
 
 Official trial outcomes are counted only when the benchmark dataset marks them as included in score. Excluded infrastructure or provider errors are disclosed separately. Full-benchmark figures and same-task figures remain separate, and cross-harness results are labelled as contextual rather than controlled rankings.
 

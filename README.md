@@ -14,7 +14,9 @@ This repository publishes inspectable evidence from selected AIC evaluation runs
 
 On DeepSWE v1.1 `effect-sse-httpapi-streaming`, Qwen3.8-Flash + the frozen B-original **plus item-null-fix** AIC version produced **one 47/47 canonical pass across three paid attempts**: one completed 46/47, one FAIL without a verifier score, and one completed 47/47. [Inspect the pass and full three-attempt ledger](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-03-b-original-nullfix/). An earlier 46/47 on B-original without the fix is [preserved separately](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-01-b-original-v2/) and is outside that denominator.
 
-![Qwen3.8-Flash and AIC verified result with same-task model context](assets/social-preview.png)
+In a separate local run of the same task with Qwen3.8-Flash and plain upstream DSH `0.1.6-alpha.2`, the canonical verifier recorded **40/47 F2P, 70/70 P2P, reward 0**. The [same-task Harness comparison](comparisons/deepswe-v1.1/effect-sse-httpapi-streaming/) checks task text, base commit, model route and verifier identity, and explains the different attempt counts and execution conditions. It is an observed comparison, not a pass-rate estimate.
+
+![Updo-policy-alerting Qwen3.8-Flash and AIC verified result with same-task model context](assets/social-preview.png)
 
 The updo comparison above establishes task-difficulty context. AIC and the official model rows used different harnesses, operator protocols, and sampling designs, so it is not a controlled leaderboard.
 
