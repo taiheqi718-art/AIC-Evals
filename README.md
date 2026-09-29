@@ -26,7 +26,7 @@ The updo comparison above establishes task-difficulty context. AIC and the offic
 
 | Benchmark | Task | Model | Attempt | F2P | P2P | Reward | Model cost | Observed time | Effective time |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|
-| DeepSWE v1.1 | [`effect-sse-httpapi-streaming`](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-03-b-original-nullfix/) | Qwen3.8-Flash | 3 (B-original + nullfix; 1/3 paid attempts passed) | **47/47** | **70/70** | **1.0** | not reported | **1h 28m 47s** | — |
+| DeepSWE v1.1 | [`effect-sse-httpapi-streaming`](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-03-b-original-nullfix/) | Qwen3.8-Flash | 3 (B-original + nullfix; 1/3 paid attempts passed) | **47/47** | **70/70** | **1.0** | **$0.75** | **1h 28m 47s** | — |
 | DeepSWE v1.1 | [`effect-sse-httpapi-streaming`](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-01-b-original-nullfix/) | Qwen3.8-Flash | 1 (B-original + nullfix) | **46/47** | **70/70** | **0** | **$1.27** | **2h 29m 45s** | — |
 | DeepSWE v1.1 | [`effect-sse-httpapi-streaming`](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-01-b-original-v2/) | Qwen3.8-Flash | 1 (earlier B-original, v2 check profile) | **46/47** | **70/70** | **0** | not reported | **2h 48m 39s** | — |
 | DeepSWE v1.1 | [`updo-policy-alerting`](runs/deepswe-v1.1/updo-policy-alerting/qwen3.8-flash/attempt-01-post-fix/) | Qwen3.8-Flash | 1 (post-fix) | **17/17** | **123/123** | **1.0** | **$0.31** | **56m 55s** | **< 56m 55s** |

