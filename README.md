@@ -12,7 +12,7 @@ This repository publishes inspectable evidence from selected AIC evaluation runs
 
 **DeepSeek V4 Flash + AIC also passed all 17/17 canonical checks on the same task, unattended, in 49m 05s.** [Open that evidence bundle](runs/deepswe-v1.1/updo-policy-alerting/deepseek-v4-flash/attempt-01/).
 
-On DeepSWE v1.1 `effect-sse-httpapi-streaming`, Qwen3.8-Flash + the frozen B-original **plus item-null-fix** AIC version produced **one 47/47 canonical pass across three paid attempts**: one completed 46/47, one operator-stopped attempt counted as failed without a verifier score, and one completed 47/47. [Inspect the pass and full three-attempt ledger](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-03-b-original-nullfix/). An earlier 46/47 on B-original without the fix is [preserved separately](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-01-b-original-v2/) and is outside that denominator.
+On DeepSWE v1.1 `effect-sse-httpapi-streaming`, Qwen3.8-Flash + the frozen B-original **plus item-null-fix** AIC version produced **one 47/47 canonical pass across three paid attempts**: one completed 46/47, one FAIL without a verifier score, and one completed 47/47. [Inspect the pass and full three-attempt ledger](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-03-b-original-nullfix/). An earlier 46/47 on B-original without the fix is [preserved separately](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-01-b-original-v2/) and is outside that denominator.
 
 ![Qwen3.8-Flash and AIC verified result with same-task model context](assets/social-preview.png)
 
@@ -32,7 +32,7 @@ The updo comparison above establishes task-difficulty context. AIC and the offic
 
 ¹ The DeepSeek V4 Flash updo run used a non-commercial quota on a third-party OpenAI-compatible endpoint, so no dollar cost is reported; its token usage is in the [evidence bundle](runs/deepswe-v1.1/updo-policy-alerting/deepseek-v4-flash/attempt-01/). The two updo rows used different AIC revisions and are separate attempt series.
 
-The earliest Effect SSE run used a different AIC baseline and a v2 check profile that exposed protected test **filenames** in an early check response; its [evidence bundle](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-01-b-original-v2/) discloses that limitation. It is historical evidence, not part of the later version's 1/3 figure. The stopped attempt is counted as a failed paid attempt in that later series, but it has no canonical verifier score. The 1/3 figure is an observed attempt ledger, not Pass@1 or an estimated model pass rate.
+The earliest Effect SSE run used a different AIC baseline and a v2 check profile that exposed protected test **filenames** in an early check response; its [evidence bundle](runs/deepswe-v1.1/effect-sse-httpapi-streaming/qwen3.8-flash/attempt-01-b-original-v2/) discloses that limitation. It is historical evidence, not part of the later version's 1/3 figure. The second attempt in the later series is counted as FAIL without a canonical verifier score. The 1/3 figure is an observed attempt ledger, not Pass@1 or an estimated model pass rate.
 
 > **Updo timing note:** The observed AIC time for the Qwen updo run includes six non-passing acceptance-probe executions—three `probe_error` and three `behavior_failed` outcomes—and the associated corrective turns. These included probe-construction errors and assertions superseded by corrected evidence, not canonical-verifier failures. The exact retry-adjusted duration cannot be isolated reliably, so effective time is reported only as a conservative upper bound: **< 56m 55s**.
 
@@ -97,7 +97,7 @@ The intended bundle, privacy rules, attempt-disclosure policy, and review proces
 
 A published run shows that the frozen patch identified by its SHA-256 digest produced the recorded verifier result under the stated environment. AIC itself is proprietary and is not distributed here, so this repository is an artifact record—not a fully reproducible copy of the orchestration system.
 
-Attempt numbering is scoped to a materially stable AIC baseline and evaluation profile. The updo post-fix result began its own series; the Effect SSE B-original and B-original + nullfix runs belong to different series. The later Effect SSE series publishes all three paid attempts, including the operator stop. This repository does not represent a full-benchmark score. These results are independent publications and are not official leaderboard submissions.
+Attempt numbering is scoped to a materially stable AIC baseline and evaluation profile. The updo post-fix result began its own series; the Effect SSE B-original and B-original + nullfix runs belong to different series. The later Effect SSE series publishes all three paid attempts, including the unscored FAIL. This repository does not represent a full-benchmark score. These results are independent publications and are not official leaderboard submissions.
 
 See [METHODOLOGY.md](METHODOLOGY.md) for the evidence protocol, [FAQ.md](FAQ.md) for common interpretation questions, and [DISCLAIMER.md](DISCLAIMER.md) for scope and limits.
 

